@@ -4,9 +4,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo</title>
+    <title>Hotel</title>
+    <link rel="stylesheet" href="Estilos/paginaprincipal.css">
+
 </head>
 <body>
-    <h1>pero está funcionando</h1>
+    <div id=" encabezado">
+        <a id= "home" href=""> Home </a>
+        <a id= "Who"href=""> Quienes Somos</a>
+        <a id= "contact" href="">Contáctanos</a>    
+      
+    </div>
+
+    <div id=" imagenes">
+        <img src="https://img.freepik.com/foto-gratis/pequena-habitacion-hotel-paredes-blancas-ventana-panoramica_1262-12488.jpg?w=740&t=st=1661873663~exp=1661874263~hmac=22003b67852c2c7f2f0fdff48ce486965e9cef1f984986efd2354e12ee47de0f" alt="">
+    </div>
+
+    <div id="calendario">
+        <h1>Calendario de Reserva</h1>
+
+    <form action="/action_page.php">
+    <label for="reserva">Entrada:</label>
+    <input type="date" id="entrada" name="entrada">
+    <input type="submit">
+    </form>
+
+    <form action="/action_page.php">
+        <label for="reserva">Salida:</label>
+        <input type="date" id="salida" name="salida">
+        <input type="submit">
+        </form>
+
+    </div>
+
+    <div>
+        <h2>Cantidad de huespedes</h2>
+        <h3> Adultos </h3>
+        <input type="number" id="myNumber" value="2">
+        <h3> Niños </h3>
+        <input type="number" id="myNumber" value="0">
+        <button id="reservar">Reservar</button>
+    </div>
+
+    <div>
+        <h2>Opiniones</h2>
+        <span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p>4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+    </div>
+
+    <div>
+        
+        <span>Ubicacion </span>
+        <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+            var setting = {"height":557,"width":803,"zoom":17,"queryString":"UTP, Pereira, Risaralda, Colombia","place_id":"ChIJB5IFA2WHOI4RO5oeMPIdZ9U","satellite":false,"centerCoord":[4.795764151332331,-75.69032234999999],"cid":"0xd5671df2301e9a3b","lang":"es","cityUrl":"/colombia/pereira-36205","cityAnchorText":"Mapa de Pereira, Eje Cafetero, Colombia","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"802771"};
+            var d = document;
+            var s = d.createElement('script');
+            s.src = 'https://1map.com/js/script-for-user.js?embed_id=802771';
+            s.async = true;
+            s.onload = function (e) {
+              window.OneMap.initMap(setting)
+            };
+            var to = d.getElementsByTagName('script')[0];
+            to.parentNode.insertBefore(s, to);
+          })();</script><a href="https://1map.com/es/map-embed">1 Map</a></div>
+          
+          <span><h2>Quienes somos </h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quam voluptas alias libero veritatis nam doloribus, distinctio, iusto facilis veniam nihil. Nobis repellat labore porro. Assumenda accusamus quod unde beatae.</p></span>
+
+    </div>
+
+    <div id=" encabezado">
+        <a id= "home" href=""> Redes Sociales</a>
+        <a id= "Who"href=""> Contactanos</a>
+           
+      
+    </div>
+
+
+
+
+    <h1></h1>
 </body>
 </html>
