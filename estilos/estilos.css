@@ -1,0 +1,45 @@
+body {
+    background-color: #f4e7d5;
+
+}
+.encabezado{
+    background-color: #84b09b;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    size: 14;
+    padding: 15px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #f4e7d5;
+  }
+
+  .carrusel{
+    height: 40px;
+  }
+ 
+  .piedepagina{
+    background-color: #84b09b;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    size: 14;
+    padding: 15px;
+}
