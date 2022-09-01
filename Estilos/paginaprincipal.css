@@ -1,74 +1,143 @@
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial;
-  margin: 0 auto; /* Center website */
-  max-width: 800px; /* Max width */
-  padding: 20px;
+  background-color: #f4e7d5;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+.encabezado{
+  height: 15%;
+  background-color: #84b09b;  
+  font-family: 'Open Sans', sans-serif;
+  size: 14;
+  padding: 15px;
 }
 
-.heading {
-  font-size: 25px;
-  margin-right: 25px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.fa {
-  font-size: 25px;
-}
-
-.checked {
-  color: orange;
-}
-
-/* Three column layout */
-.side {
+li {
   float: left;
-  width: 15%;
-  margin-top:10px;
 }
 
-.middle {
-  margin-top:10px;
-  float: left;
-  width: 70%;
-}
-
-/* Place text to the right */
-.right {
-  text-align: right;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The bar container */
-.bar-container {
-  width: 100%;
-  background-color: #f1f1f1;
-  text-align: center;
+li a {
+  display: block;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-/* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
-.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
-.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
-.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
-.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
-
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-  .side, .middle {
-    width: 100%;
-  }
-  .right {
-    display: none;
-  }
+li a:hover {
+  color: black;
+  background-color: #f4e7d5;
 }
+
+.avatar {
+  width: 20px;
+  text-align: center;  
+}
+
+.slide img{
+  height: 20%; 
+}
+
+.calendario{ 
+  height: 10%;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #84b09b;
+  padding: 10px;
+  
+}
+
+.fecha{
+  margin-left: 50px;
+  float: left;
+  margin: 15px;
+}
+
+.contador{
+  width: 40px;
+  margin: 15px auto;
+}
+
+#contenido{
+  height: 35%;
+  background-color: #ecd4c6;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em;
+}
+
+#calificacion{
+  height: 10%;
+  background-color: #ecd4c6;
+  border-radius: 1em;
+  margin: 1em;
+
+}
+
+#pie-pagina{
+  height: 10%;
+  background-color: #84b09b;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  padding: 60px;
+}
+
+
+#about{ 
+ text-align: justify; 
+   
+} 
+
+
+#contacto{
+  float:left;
+}
+
+#logo{
+  margin-left: 50px;
+  height:90px;    
+}
+
+#redes{
+  margin-top: 30px;
+  margin-left: 20px;
+  float: left;
+}
+
+#info-centro{
+  margin-top: 30px;
+  margin-left: 30px;
+  text-align: justify;
+  float:left;
+}
+
+.twitter{
+  height:50px;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.facebook{
+  height:50px;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.instagram{
+  height:50px;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+#copy{
+  margin-top: 30px;
+  text-align: center;
+}
+
