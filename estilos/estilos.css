@@ -43,3 +43,34 @@ ul {
     size: 14;
     padding: 15px;
 }
+
+#carouselExampleIndicators{
+  float: left;
+  width: 40%;
+  height: 50%;
+}
+
+.slide img{
+  height: 100%;
+  width: 100%; 
+}
+
+#infoHjunior{
+  float: left;
+}
+
+.camita{
+  height: 100px;
+  width: auto;
+}
+
+#carousel2{
+  float:right;
+  width: 40%;
+  height: 50%;
+}
+
+.slide1 img{
+  height: 100%;
+  width: 100%; 
+}
