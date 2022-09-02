@@ -1,76 +1,202 @@
-body {
-    background-color: #f4e7d5;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  line-height: 1.6;
+}
+
+/*encabezado */
+.head-top{
+  background-color:#8fbea7bd;
+  width:100%;
 
 }
-.encabezado{
-    background-color: #84b09b;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    size: 14;
-    padding: 15px;
+
+.lista-encabezado{    
+  height: 10%;    
+  font-family: 'Open Sans', sans-serif;
+  size: 14;
+  padding: 15px;
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #f4e7d5;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
 
-  .carrusel{
-    height: 40px;
-  }
- 
-  .piedepagina{
-    background-color: #84b09b;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    size: 14;
-    padding: 15px;
 }
 
-#carouselExampleIndicators{
+li {
   float: left;
-  width: 40%;
-  height: 50%;
+  color:white;
 }
 
-.slide img{
-  height: 100%;
-  width: 100%; 
+li a {    
+  margin-left: 15px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-#infoHjunior{
+li a:hover {
+  color: black;
+  background-color: #8fbea7b9;
+}
+
+
+
+#habitacion1{
+  display: flex;
+  margin: 10px;
+  background-color: #f4e7d5;
+}
+
+
+/* HABITACIÓN 1*/
+#carrusel{
+  width: 25%;
+  height: 25%;
   float: left;
 }
 
-.camita{
-  height: 100px;
-  width: auto;
+#descripcion{
+  padding-top: 150px;
+  width: 25%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
 }
 
-#carousel2{
-  float:right;
-  width: 40%;
-  height: 50%;
+#btnreservar{
+  width: 25%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+  padding: 200px;
 }
 
-.slide1 img{
-  height: 100%;
-  width: 100%; 
+#AC{
+  width: 40px;
+  height: auto;
+  margin: 10px;
+}
+
+#baño{
+  width: 40px;
+  height: auto;
+  margin: 10px;
+}
+
+#toalla{
+  width: 40px;
+  height: auto;
+  margin: 10px;
+}
+
+#cafe{
+  width: 40px;
+  height: auto;
+  margin: 10px;
+}
+
+#solo{
+  width: 40px;
+  height: auto;
+  margin: 10px;
+}
+
+#btn{
+  width: 200px;
+  height: auto;
+}
+
+/* HABITACIÓN 2*/
+
+#carrusel1{
+  width: 25%;
+  height: 25%;
+  float: right;
+  
+}
+#descripcion1{
+  padding-top: 150px;
+  width: 25%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  float: right;
+}
+
+#btnreservar1{
+  width: 25%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  float: right;
+  padding: 200px;
+}
+#habitacion2{
+  display: flex;
+  margin: 10px;
+  background-color: #f4e7d5;
+}
+
+/* HABITACIÓN 2*/
+
+#carrusel2{
+  width: 25%;
+  height: 25%;
+  float: left;
+  
+}
+#descripcion2{
+  padding-top: 150px;
+  width: 25%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+}
+
+#btnreservar2{
+  width: 25%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+  padding: 200px;
+}
+#habitacion3{
+  display: flex;
+  margin: 10px;
+  background-color: #f4e7d5;
+}
+
+/* footer */
+.footer{
+  background: #84b09b;
+  color: #fff;
+  text-align: center;
+  display: grid;
+  padding:10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+
+.contact-item span{
+  display: block;
+}
+
+a {
+  color:#fff;
+}
+
+a:hover{
+  color:rgba(255, 255, 255, 0.445);
+}
+
+.copy{
+  margin-top: 20px;
 }
