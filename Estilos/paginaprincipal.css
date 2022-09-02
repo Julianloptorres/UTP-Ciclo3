@@ -1,12 +1,23 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-body {
-  background-color: #f4e7d5;
-  font-family: 'Open Sans', sans-serif;
-  }
+body{
+  line-height: 1.6;
+}
+/*encabezado */
+.head-top{
+  background-color:transparent;
+  position:absolute;
+  width:100%;
+  z-index:1;
+}
 
-.encabezado{
-  height: 15%;
-  background-color: #84b09b;  
+.lista-encabezado{    
+  height: 10%;    
   font-family: 'Open Sans', sans-serif;
   size: 14;
   padding: 15px;
@@ -21,10 +32,11 @@ ul {
 
 li {
   float: left;
+  color:white;
 }
 
-li a {
-  display: block;
+li a {    
+  margin-left: 15px;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -33,111 +45,213 @@ li a {
 
 li a:hover {
   color: black;
-  background-color: #f4e7d5;
+  background-color: #8fbea763;
 }
 
-.avatar {
+.avatar {    
   width: 20px;
-  text-align: center;  
+  text-align: center; 
+  float:right; 
 }
 
-.slide img{
-  height: 20%; 
+/* Fotos deslizandoce*/
+.slide{
+  height: 15%;
+  margin-bottom:2px;    
 }
 
-.calendario{ 
-  height: 10%;
-  text-align: center;
-  margin-top: 10px;
+/*Formulario de reservas*/
+.book{
+  padding: 20px;
   background-color: #84b09b;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);    
+}
+
+#chekin-date{
+  border-radius: 5px;
+  margin:4px;
+}
+
+#chekout-date{
+  border-radius: 5px;
+  margin:4px;
+}
+
+#adulto{
+  border-radius: 5px;
+  margin:4px;
+  width: 40px;
+}
+
+#niños{
+  border-radius: 5px;
+  margin:4px;
+  width: 40px;
+}
+
+#habitacion{
+  border-radius: 5px;
+  margin:4px;
+  width: 40px;
+}
+
+.etiqueta {
+  font-weight: bold;
+  font-size: 18px; 
+}
+
+.btn{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
   padding: 10px;
+  width: 140px;
+  display: block;
+  margin: 15px auto;    
+  border: 3px solid #fff;
+  color: white;    
+  
+}
+.btn:hover{
+  opacity: 0.85;
+  background: transparent;
   
 }
 
-.fecha{
-  margin-left: 50px;
-  float: left;
-  margin: 15px;
-}
-
-.contador{
-  width: 40px;
-  margin: 15px auto;
-}
-
-#contenido{
-  height: 35%;
-  background-color: #ecd4c6;
-  border-radius: 1em;
-  margin: 1em;
-  padding: 1em;
-}
-
-#calificacion{
-  height: 10%;
-  background-color: #ecd4c6;
-  border-radius: 1em;
-  margin: 1em;
-
-}
-
-#pie-pagina{
-  height: 10%;
+/*about*/
+.about {
+  display:flex;
   background-color: #84b09b;
-  color: black;
-  font-family: 'Open Sans', sans-serif;
-  padding: 60px;
+  margin-bottom: 50px;
+  margin-top: 5%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}  
+
+.izquierda  {
+  width: 50%;    
+  margin-top: 20px;    
+  padding: 20px;    
 }
 
-
-#about{ 
- text-align: justify; 
-   
+.derecha { 
+  margin-top: 40px;   
+  width: 40%;
+  float: right;
+  max-height: auto; 
+  margin-left: 20px;
+  overflow: hidden;
+  padding: 20px;  
+}   
+.about .image2 {
+  width: 100%;
+  height: auto;    
+  bottom: 5px;
+  z-index: 2;  
 } 
 
+/* customers */
 
-#contacto{
-  float:left;
+.customers{    
+  padding: 40px ;
+  display: flex;       
 }
 
-#logo{
-  margin-left: 50px;
-  height:90px;    
+.title{
+  text-align: center;
+  font-weight: bold;
 }
 
-#redes{
-  margin-top: 30px;
-  margin-left: 20px;
-  float: left;
+.customer{
+  background: #fff;
+  padding: 35px;
+  text-align: center;
+  margin: 24px 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);   
 }
 
-#info-centro{
-  margin-top: 30px;
-  margin-left: 30px;
-  text-align: justify;
-  float:left;
+#customer1{
+ height: 517px;
+ width: 568px;
+ max-height: auto;
+ overflow: hidden;
+ float: left;
+ margin: 25px;
 }
 
-.twitter{
-  height:50px;
-  border-radius: 25px;
-  padding: 5px;
+#customer2{
+  height: 517px;
+  width: 568px;
+ overflow: hidden;
+ float: left;
+ margin: 25px;
 }
 
-.facebook{
-  height:50px;
-  border-radius: 25px;
-  padding: 5px;
+#customer3{
+ height: 517px;
+ width: 568px;
+ max-height: auto;
+ overflow: hidden;
+ float: left;
+ margin: 25px;
+} 
+
+.rating{
+  margin: 10px 0;  
+  color:#e3b155; 
 }
 
-.instagram{
-  height:50px;
-  border-radius: 25px;
-  padding: 5px;
-}
 
-#copy{
-  margin-top: 30px;
+.customer h3{
+  font-size: 25px;
   text-align: center;
 }
 
+
+.customer p{
+  opacity: 0.7;
+  line-height: 1.8;
+  width: 60%;
+  margin: 0 auto;
+  
+}
+
+.customer img{
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  margin: 25px auto;
+  height: fit-content;
+}
+.customer span{
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+/* footer */
+.footer{
+  background: #84b09b;
+  color: #fff;
+  text-align: center;
+  display: grid;
+  padding:10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+
+.contact-item span{
+  display: block;
+}
+
+a {
+  color:#fff;
+}
+
+a:hover{
+  color:rgba(255, 255, 255, 0.445);
+}
+
+.copy{
+  margin-top: 20px;
+}
