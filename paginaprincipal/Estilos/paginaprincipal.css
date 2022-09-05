@@ -1,26 +1,14 @@
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-body{
-  line-height: 1.6;
+body{  
   background-color: #164773;
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
 }
 /*encabezado */
 .head-top{
-  background-color:#0B2B40;
-  position:absolute;
-  width:100%;
-  z-index:1;
+  background-color:#0B2B40;    
 }
 
-.lista-encabezado{    
-  height: 10%;    
-  font-family: 'Open Sans', sans-serif;
-  size: 14;
+.lista-encabezado{      
+  height: 10%; 
   padding: 15px;
 }
 
@@ -51,9 +39,7 @@ li a:hover {
 
 
 /* Fotos deslizandoce*/
-.slide{
-  height: 15%;
-  margin-bottom:2px;
+.slide{  
   box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);    
 }
 
@@ -65,8 +51,7 @@ li a:hover {
   background-color: #f2f2f2;
   text-align: center;
   box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
-  border-radius: 10px;
- 
+  border-radius: 10px; 
 }
 
 #chekin-date{
@@ -102,8 +87,7 @@ li a:hover {
   box-shadow: 0px 0px 5px #164773;   
 }
 
-.etiqueta {
-  
+.etiqueta {  
   font-weight: bold;
   font-size: 18px; 
 }
@@ -161,15 +145,10 @@ li a:hover {
 } 
 
 /* customers */
-
 .customers{    
   padding: 40px 0;
-  display: flex;       
-}
-
-.title{
-  text-align: center;
-  font-weight: bold;
+  display: flex;
+  text-align: center;       
 }
 
 .customer{
@@ -179,52 +158,35 @@ li a:hover {
   margin: 24px 0;
   box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
   border-radius: 5px;
-  cursor: pointer; 
+  cursor: pointer;
+  margin: 25px; 
   
 }
-
-#customer1{
- 
- margin: 25px;
-}
-
-#customer2{
-  
- margin: 25px;
-}
-
-#customer3{
- 
- margin: 25px;
-} 
 
 .rating{
   margin: 10px 0;  
   color:#e3b155; 
 }
 
-
 .customer h3{
   font-size: 25px;
   text-align: center;
 }
 
-
 .customer p{
   opacity: 0.7;
   line-height: 1.8;
   width: 60%;
-  margin: 0 auto;
-  
+  margin: 0 auto;  
 }
 
 .customer img{
   width: 170px;
   height: 170px;
   border-radius: 50%;
-  margin: 25px auto;
- 
+  margin: 25px auto; 
 }
+
 .customer span{
   font-weight: 700;
   opacity: 0.7;
@@ -233,7 +195,6 @@ li a:hover {
 .customer:hover{
   transform: translateY(-18px);
 }
-
 
 /* footer */
 .footer{
