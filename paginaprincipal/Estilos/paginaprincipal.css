@@ -7,10 +7,11 @@
 
 body{
   line-height: 1.6;
+  background-color: #164773;
 }
 /*encabezado */
 .head-top{
-  background-color:transparent;
+  background-color:#0B2B40;
   position:absolute;
   width:100%;
   z-index:1;
@@ -52,46 +53,57 @@ li a:hover {
 /* Fotos deslizandoce*/
 .slide{
   height: 15%;
-  margin-bottom:2px;    
+  margin-bottom:2px;
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);    
 }
 
 /*Formulario de reservas*/
 .book{
-  padding: 20px;
-  background-color: #84b09b;
+  width: 80%;
+  margin: 30px auto;
+  padding: 40px;
+  background-color: #f2f2f2;
   text-align: center;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);    
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
+  border-radius: 10px;
+ 
 }
 
 #chekin-date{
   border-radius: 5px;
   margin:4px;
+  box-shadow: 0px 0px 5px #164773;   
 }
 
 #chekout-date{
   border-radius: 5px;
   margin:4px;
+  box-shadow: 0px 0px 5px #164773;   
 }
 
 #adulto{
   border-radius: 5px;
   margin:4px;
   width: 40px;
+  box-shadow: 0px 0px 5px #164773;   
 }
 
 #niños{
   border-radius: 5px;
   margin:4px;
   width: 40px;
+  box-shadow: 0px 0px 5px #164773;   
 }
 
 #habitacion{
   border-radius: 5px;
   margin:4px;
   width: 40px;
+  box-shadow: 0px 0px 5px #164773;   
 }
 
 .etiqueta {
+  
   font-weight: bold;
   font-size: 18px; 
 }
@@ -106,8 +118,9 @@ li a:hover {
   width: 140px;
   display: block;
   margin: 15px auto;    
-  border: 3px solid #fff;
-  color: white;    
+  border: 3px solid black;
+  color: black;
+  box-shadow: 0px 0px 5px #164773;    
   
 }
 .btn:hover{
@@ -119,10 +132,10 @@ li a:hover {
 /*about*/
 .about {
   display:flex;
-  background-color: #84b09b;
-  margin-bottom: 50px;
-  margin-top: 5%;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+  background-color: #f2f2f2;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
 }  
 
 .izquierda  {
@@ -150,7 +163,7 @@ li a:hover {
 /* customers */
 
 .customers{    
-  padding: 40px ;
+  padding: 40px 0;
   display: flex;       
 }
 
@@ -160,36 +173,28 @@ li a:hover {
 }
 
 .customer{
-  background: #fff;
+  background: #f2f2f2;
   padding: 35px;
   text-align: center;
   margin: 24px 0;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);   
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
+  border-radius: 5px;
+  cursor: pointer; 
+  
 }
 
 #customer1{
- height: 517px;
- width: 568px;
- max-height: auto;
- overflow: hidden;
- float: left;
+ 
  margin: 25px;
 }
 
 #customer2{
-  height: 517px;
-  width: 568px;
- overflow: hidden;
- float: left;
+  
  margin: 25px;
 }
 
 #customer3{
- height: 517px;
- width: 568px;
- max-height: auto;
- overflow: hidden;
- float: left;
+ 
  margin: 25px;
 } 
 
@@ -214,25 +219,30 @@ li a:hover {
 }
 
 .customer img{
-  width: 25%;
-  height: 25%;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   margin: 25px auto;
-  height: fit-content;
+ 
 }
 .customer span{
   font-weight: 700;
   opacity: 0.7;
 }
 
+.customer:hover{
+  transform: translateY(-18px);
+}
+
+
 /* footer */
 .footer{
-  background: #84b09b;
+  background: #0B2B40;
   color: #fff;
   text-align: center;
   display: grid;
   padding:10px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
 }
 
 .contact-item span{
