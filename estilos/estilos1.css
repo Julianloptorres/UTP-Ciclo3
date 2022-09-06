@@ -1,3 +1,19 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    line-height: 1.6;
+    background-color: #164773;
+} 
+ 
  /*encabezado */
  .navbar{
     background-color:#0B2B40;
@@ -9,33 +25,27 @@
   color: #fff;  
   }
   
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
-    
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    line-height: 1.6;
-    background-color: #164773;
-}
+
 .btn{
     font-size: 16px;
+    text-transform: uppercase;
     font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
     display: block;
     margin: 15px auto;
     cursor: pointer;
+    transition: var(--transition);
     background-color: #164773;
     color: white;
 }
+
 .btn:hover{
-    opacity: 0.85;
-     
+    opacity: 0.85;     
 }
+
 .flex{
     display: flex;
     flex-direction: column;
@@ -47,53 +57,12 @@ img{
     width: 100%;
     display: block;
 }
+
 @media(max-width: 500px){
     body{
         font-size: 14px;
     }
 }
-/*encabezado */
-.head-top{
-    background-color:#0B2B40;
-    width:100%;
-  
-  }
-  
-  .lista-encabezado{    
-    height: 10%;    
-    font-family: 'Open Sans', sans-serif;
-    size: 14;
-    padding: 15px;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-  
-  }
-  
-  li {
-    float: left;
-    color:white;
-  }
-  
-  li a {    
-    margin-left: 15px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    color: black;
-    background-color: #8fbea7b9;
-  }
-  
-
 
 /* room */
 
@@ -111,9 +80,7 @@ img{
 .room-text{
     padding: 5px 20px;
 }
-.room-text h3{
-    font-size: 24px;
-}
+
 .room-text ul{
     list-style-type: none;
     margin: 15px 0;
@@ -145,15 +112,6 @@ img{
 .room-image:hover img{
     transform: scale(1.1);
 }
-#descripcion{
-    padding-top: 150px;
-    width: 25%;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    float: left;
-  }
-  
-
 
 @media (min-width: 900px){
     .rooms-container{
