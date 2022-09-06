@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+#contenido {
+	background: #ecd4c6;
+	width: 100%;
+    height: auto;
+	
+}
+body {
+    background: #ecd4c6;
+}
+
+.lista-encabezado {
+    width:  100%;
+    height: 60px;
+    background-color: #27242a;
+}
+
+
+.main {
+	
+    width: 90%;
+    height: auto;
+	background-color: #f4e7d5;
+	margin: 0em auto;
+}
+.logo {
+    width: 99%;
+    height: 100px;
+    
+}
+
+.detalle_reserva {
+    width: 99%;
+    height: 240px;
+    
+}
+
+.tipo_habitacion {
+    width: 99%;
+    height: 250px;
+    
+}
+.formulario-huesped {
+    width: 99%;
+    height: 590px;
+    
+}
+
+.formulario-pago {
+    width: 99%;
+    height: 590px;
+      
+}
+
+.contenedor-main {
+    display:flex;
+    background-color: #84b09b;
+    margin-bottom: 50px;
+    margin-top: 1%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+
+.contenedor-main h2 {
+    background: #27242a;
+    color: #f4e7d5;
+    text-align: center;
+}
+
+.formulario-izq  {
+    width: 30%;    
+    margin-top: 20px;    
+    padding: 20px;    
+  }
+  
+  .formulario-der { 
+    display:flex;
+    margin-top: 20px;   
+    width: 65%;
+    float: right;
+    max-height: auto; 
+    margin-left: 5px;
+    overflow: hidden;
+    padding: 20px;  
+  }   
+
+  /* Css formulario */
+
+  form{
+	width:100%;
+	padding:16px;
+	margin:auto;
+	background-color:#e3b155;
+}
+
+form label{
+	width:80px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:60%;
+	padding:3px 10px;
+	border:1px solid #84b09b;
+	border-radius:3px;
+	background-color:#f4e7d5;
+	margin:8px 0;
+	display:inline-block;
+    color: #27242a;
+}
+
+.detalle_reserva form input[type="text"],
+.detalle_reserva form input[type="email"],
+.detalle_reserva form input[type="date"]{
+	width:60%;
+	padding:3px 10px;
+    text-align: right;
+	border:1px solid #84b09b;
+	border-radius:3px;
+	background-color:#f4e7d5;
+	margin:8px 0;
+	display:inline-block;
+    color: #27242a;
+
+}
+
+.tipo_habitacion form input[type="text"]{
+	width:60%;
+	padding:3px 10px;
+    text-align: right;
+	border:1px solid #84b09b;
+	border-radius:3px;
+	background-color:#f4e7d5;
+	margin:8px 0;
+	display:inline-block;
+    color: #27242a;
+
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:15px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#f4e7d5;
+	background-color:#27242a;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+    padding:8px 16px;
+	border:1px solid #84b09b;
+	border-radius:3px;
+	background-color:#f4e7d5;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
