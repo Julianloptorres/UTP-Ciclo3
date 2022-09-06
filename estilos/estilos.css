@@ -7,11 +7,12 @@
 
 body{
   line-height: 1.6;
+  background-color: #164773;
 }
 
 /*encabezado */
 .head-top{
-  background-color:#8fbea7bd;
+  background-color:#0B2B40;
   width:100%;
 
 }
@@ -55,7 +56,7 @@ li a:hover {
 #habitacion1{
   display: flex;
   margin: 10px;
-  background-color: #f4e7d5;
+  background-color: #F2F2F2;
 }
 
 
@@ -143,7 +144,7 @@ li a:hover {
 #habitacion2{
   display: flex;
   margin: 10px;
-  background-color: #f4e7d5;
+  background-color: #F2F2F2;
 }
 
 /* HABITACIÓN 2*/
@@ -172,12 +173,12 @@ li a:hover {
 #habitacion3{
   display: flex;
   margin: 10px;
-  background-color: #f4e7d5;
+  background-color: #F2F2F2;
 }
 
 /* footer */
 .footer{
-  background: #84b09b;
+  background: #0B2B40;
   color: #fff;
   text-align: center;
   display: grid;
