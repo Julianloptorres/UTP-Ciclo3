@@ -49,8 +49,8 @@
   
   /* footer */
   .footer{
-    background: #84b09b;
-    color: #f4e7d5;
+    background: #0B2B40;
+    color: #F2F2F2;
     text-align: center;
     display: grid;
     padding:10px;
@@ -62,7 +62,7 @@
   }
   .about {
     display:flex;
-    background-color: #84b09b;
+    background-color: #F2F2F2;
     margin-bottom: 50px;
     margin-top: 5%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
@@ -81,7 +81,8 @@
     max-height: auto; 
     margin-left: 20px;
     overflow: hidden;
-    padding: 20px;  
+    padding: 20px;
+    color: #0B2B40;  
   }   
   .about .image2 {
     width: 100%;
@@ -91,7 +92,7 @@
   } 
   
   a {
-    color:#f4e7d5;
+    color:#F2F2F2;
   }
   
   a:hover{
