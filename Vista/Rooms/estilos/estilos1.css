@@ -1,14 +1,19 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> bf62743b1e5e51c78cbc219b5769777ab01cefc9
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
-    
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    line-height: 1.6;
+    background-color: #164773;
+} 
+ 
  /*encabezado */
  .navbar{
     background-color:#0B2B40;
@@ -19,31 +24,28 @@
   .nav-link{
   color: #fff;  
   }
-
-  .container-md {
-  background-color:#F2F2F2;
-  }
   
-html{
-    scroll-behavior: smooth;
-}
-body{
-    line-height: 1.6;
-    background-color: #164773;
-}
+
 .btn{
     font-size: 16px;
+    text-transform: uppercase;
     font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
     display: block;
     margin: 15px auto;
     cursor: pointer;
+    transition: var(--transition);
     background-color: #164773;
     color: white;
 }
+
 .btn:hover{
-    opacity: 0.85;
-     
+    opacity: 0.85;     
 }
+
 .flex{
     display: flex;
     flex-direction: column;
@@ -55,6 +57,7 @@ img{
     width: 100%;
     display: block;
 }
+
 @media(max-width: 500px){
     body{
         font-size: 14px;
@@ -77,13 +80,7 @@ img{
 .room-text{
     padding: 5px 20px;
 }
-<<<<<<< HEAD
-.room-text h3{
-    font-size: 24px;
-}
-=======
 
->>>>>>> bf62743b1e5e51c78cbc219b5769777ab01cefc9
 .room-text ul{
     list-style-type: none;
     margin: 15px 0;
@@ -115,18 +112,6 @@ img{
 .room-image:hover img{
     transform: scale(1.1);
 }
-<<<<<<< HEAD
-#descripcion{
-    padding-top: 150px;
-    width: 25%;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    float: left;
-  }
-  
-
-=======
->>>>>>> bf62743b1e5e51c78cbc219b5769777ab01cefc9
 
 @media (min-width: 900px){
     .rooms-container{
