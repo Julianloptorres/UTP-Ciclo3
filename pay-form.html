@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>pay-form</title>
+  <link href="css/paginaprincipal.css" rel="stylesheet" type="text/css">
+  <link href="css/pay-form.css" rel="stylesheet" type="text/css">
+  
+</head>
+
+<body>
+  <div id="contenido">
+    <!-- Encabezado -->
+    <header class="header" id="header">
+      <div class="head-top">
+        <div class="lista-encabezado .navbar-toggler">
+          <ul>
+            <li>DRACO HOTEL</li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#about">¿Quienes somos?</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+            <li><a id="avatar" href="#cuenta"> <span><i class="fas fa-chalkboard-teacher"></i></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
+
+
+
+    <main class="main">
+      <section class="contenedor-main">
+        <div class="formulario-izq">
+          <section class="logo">
+            <h2>LOGO</h2>
+          </section>
+
+          <section class="detalle_reserva">
+            <H2>Detalle de la reserva</H2>
+
+            <form action="#" target="" method="get" name="formDetalleReserva">
+
+              <label>Entrada</label>
+              <input type="date" id="entrada" class="text-right">
+
+              <label>Salida</label>
+              <input type="date" id="salida" class="text-right">
+
+              <label>Adultos</label>
+              <input type="text" name="adultos" id="adultos" value="2" />
+
+              <label>Niños</label>
+              <input type="text" name="niños" id="niños" value="1" />
+
+            </form>
+
+          </section>
+
+          <section class="tipo_habitacion">
+            <h2>Habitación doble</h2>
+            <form action="#" target="" method="get" name="formTipoHabitacion">
+
+              <label>Noches</label>
+              <input type="text" name="noches" value="3">
+
+              <label>$ noche</label>
+              <input type="text" name="valor-noche" value="$120.000">
+
+              <label>Total</label>
+              <input type="text" name="total" value="$630.000" />
+
+            </form>
+
+          </section>
+        </div>
+
+
+        <div class="formulario-der">
+          <section class="formulario-huesped">
+            <h2>Detalles Huésped</h2>
+            <form action="#" target="" method="get" name="formDatosPersonales">
+
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+
+              <label for="apellidos">Apellidos</label>
+              <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" />
+
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="email" required />
+
+              <label for="direccion">Dirección</label>
+              <input type="text" name="direccion" id="direccion" placeholder="Dirección" />
+
+              <label for="ciudad">Ciudad</label>
+              <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" />
+
+              <label for="pais">País</label>
+              <input type="text" name="pais" id="pais" placeholder="País" />
+
+              <label for="telefono">Teléfono</label>
+              <input type="text" name="telefono" id="telefono" placeholder="Teléfono" />
+
+              <label for="peticion">Petición</label>
+              <textarea name="peticion" id="peticion" placeholder="describe brevemente en menos de 300 carácteres"
+                maxlength="300"></textarea>
+
+
+              <input type="submit" name="enviar" value="Confirmar" />
+            </form>
+          </section>
+
+          <section class="formulario-pago">
+            <h2>Detalles Pago</h2>
+          </section>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+  <!-- about -->
+  <section class="about" id="about">
+    <div class="izquierda">
+      <div class="img">
+        <img src="imagenes/instalaciones.jpg" alt="" class="image2">
+      </div>
+    </div>
+    <div class="derecha">
+      <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+      <h2>Bienvenido a Draco Hotel</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. </p>
+
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div>
+      <h2>Contáctanos</h2>
+      <div class="contact-item" id="contacto">
+        <span>
+          <a href="https://twitter.com/home?lang=es"><i class="fa fa-twitter f-2x"></i></a>
+          <a href="https://www.facebook.com"><i class="fa fa-facebook f-2x"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram f-2x"></i></a>
+        </span>
+        <span>
+          <i class="fas fa-phone-alt"></i>
+          +571234567890
+        </span>
+        <span>
+          <i class="fas fa-envelope"></i>
+          info@correo.com.co
+        </span>
+
+        <span>
+          <i class="fas fa-map-marker-alt"></i>
+          Calle 1 #1 - 1, Pereira, Risaralda, Colombia
+        </span>
+      </div>
+
+      <div class="copy">
+        <span>
+          © 2022 by Equipo 1 Grupo 69 MisionTic UTP
+        </span>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
