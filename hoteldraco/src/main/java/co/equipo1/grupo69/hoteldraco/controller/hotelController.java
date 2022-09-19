@@ -10,4 +10,19 @@ public class HotelController {
     public String goToHabitaciones(Model model){
         return "habitaciones";
     }
+
+    @GetMapping("/sencilla")
+    public String goToSencilla(Model model){
+        return "sencilla";
+    }
+
+    @GetMapping("/doble")
+    public String goToDoble(Model model){
+        return "room2";
+    }
+
+    @GetMapping("/king")
+    public String goToKing(Model model){
+        return "habitacion_king";
+    }
 }
