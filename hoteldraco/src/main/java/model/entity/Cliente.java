@@ -1,6 +1,9 @@
 package model.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,6 +15,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Cliente { 
+     @Id
+     @GeneratedValue(strategy = GenerationType.AUTO)
+     private Integer id;
+     
      private String nombre ;
      private String apellidos;
      private String correo;
@@ -19,4 +26,5 @@ public class Cliente {
      private String ciudad;
      private String pais;
      private String telefono;
+     
 }
