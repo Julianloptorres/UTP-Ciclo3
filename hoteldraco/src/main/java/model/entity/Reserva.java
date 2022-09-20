@@ -29,9 +29,13 @@ public class Reserva {
     private Integer cantidadNiños;
     private Integer cantidadHabitaciones;
     private String peticion;
-    @OneToMany(mappedBy = "reserva")
-    private List <Habitacion>habitaciones;
-
     @ManyToOne
     private Cliente cliente;
+    @OneToMany(mappedBy = "reserva")
+    private List <Habitacion>habitaciones;
+    
+
+
+
+    
 }
