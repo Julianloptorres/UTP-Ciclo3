@@ -1,0 +1,37 @@
+
+@startuml
+
+class Cliente{
+    - String nombre 
+    - String apellidos
+    - String correo
+    - String direccion
+    - String ciudad
+    - String pais
+    - String telefono
+
+    + set ()
+    + get ()
+ }
+
+class Reserva{
+    - date fechaEntrada
+    - date fechaSalida
+    - Int cantidadAdultos
+    - Int cantidadNiños
+    - Int cantidadHabitaciones
+    - String peticion
+    + set ()
+    + get ()
+ }
+
+ class Habitacion{
+    - float precio
+    - String tipoHabitacion
+    + set ()
+    + get ()
+ }
+
+Cliente "1" o--"*" Reserva
+Reserva "1" o--"1" Habitacion
+@enduml
