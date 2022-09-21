@@ -25,4 +25,9 @@ public class HotelController {
     public String goToKing(Model model){
         return "habitacion_king";
     }
+
+    @GetMapping("/pay-form")
+    public String goToPayForm(Model model){
+        return "pay-form";
+    }
 }
