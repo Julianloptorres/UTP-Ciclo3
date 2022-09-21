@@ -11,5 +11,5 @@ public interface ClienteService {
 
     Optional<ClienteDto> getClientesById(Integer id);
 
-    List<ReservaDto> getReservaByClienteId(Integer categoryId);
+    List<ReservaDto> getReservaByClienteId(Integer reservaId);
 }
