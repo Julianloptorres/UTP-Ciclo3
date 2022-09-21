@@ -69,19 +69,19 @@
                                     <form action="#" target="" method="get" name="formDetalleReserva">
                                         <div>
                                             <label>Entrada</label>
-                                            <label class="label-info">29 de Septiembre 2022</label>
+                                            <label class="label-info" th:text="${entrada}">29 de Septiembre 2022</label>
                                         </div>
                                         <div>
                                             <label>Salida</label>
-                                            <label class="label-info">10 de Octubre 2022</label>
+                                            <label class="label-info" th:text="${salida}">10 de Octubre 2022</label>
                                         </div>
                                         <div>
                                             <label>Adultos</label>
-                                            <label class="label-info">2</label>
+                                            <label class="label-info" th:text="${adultos}">2</label>
                                         </div>
                                         <div>
                                             <label>Niños</label>
-                                            <label class="label-info">1</label>
+                                            <label class="label-info" th:text="${childrem}">1</label>
                                         </div>
                                     </form>
 
@@ -95,15 +95,15 @@
                                     <form action="#" target="" method="get" name="formTipoHabitacion">
                                         <div>
                                             <label>Noches</label>
-                                            <label class="label-info">10</label>
+                                            <label class="label-info" th:text="${noches}">10</label>
                                         </div>
                                         <div>
                                             <label>Valor noche</label>
-                                            <label class="label-info">$ 120.000</label>
+                                            <label class="label-info" th:text="${valorNoche}">$ 120.000</label>
                                         </div>
                                         <div>
                                             <label>Total</label>
-                                            <label class="label-info">$ 630.000</label>
+                                            <label class="label-info" th:text="${total}">$ 630.000</label>
                                         </div>
                                     </form>
 
