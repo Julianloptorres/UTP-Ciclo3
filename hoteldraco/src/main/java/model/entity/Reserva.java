@@ -16,7 +16,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
