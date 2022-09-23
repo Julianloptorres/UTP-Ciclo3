@@ -1,7 +1,5 @@
 package model.entity;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -15,9 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Habitacion {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @Id    
+    private Integer numerohabitacion; //cambie el id generado automaticamente por el numero de la habitacion con id 
     
     private Double precio ;
     private String tipoHabitacion ;
