@@ -3,8 +3,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import lombok.AllArgsConstructor;
+
+
+@AllArgsConstructor
 @Controller
 public class HotelController {
+
+    @GetMapping(value = { "/", "/index", "/index.html" })    
+    public String goToIndex(Model model) {
+        return "index";
+    }
+
     
     @GetMapping("/habitaciones")
     public String goToHabitaciones(Model model){

@@ -9,5 +9,6 @@ public class HoteldracoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HoteldracoApplication.class, args);
 	}
+	
 
 }
