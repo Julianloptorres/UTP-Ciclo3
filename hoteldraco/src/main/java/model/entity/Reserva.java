@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,8 +32,8 @@ public class Reserva {
     private String peticion;
     @ManyToOne
     private Cliente cliente;
-    @OneToMany(mappedBy = "reserva")
-    private List <Habitacion>habitaciones;
+    @OneToOne(mappedBy = "reserva")
+    private Habitacion habitacion;
     
 
 

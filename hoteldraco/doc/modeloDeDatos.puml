@@ -33,5 +33,5 @@ class Reserva{
  }
 
 Cliente "1" o--"*" Reserva
-Reserva "1" o--"*" Habitacion
+Reserva "1" o--"1" Habitacion
 @enduml
