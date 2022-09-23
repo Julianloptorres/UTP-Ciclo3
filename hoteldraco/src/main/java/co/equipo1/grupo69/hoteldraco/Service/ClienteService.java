@@ -1,4 +1,4 @@
-package Service;
+package co.equipo1.grupo69.hoteldraco.Service;
 
 import java.util.List;
 import java.util.Optional;
