@@ -1,4 +1,4 @@
-package model.entity;
+package co.equipo1.grupo69.hoteldraco.model.entity;
 import java.sql.Date;
 
 import javax.persistence.Entity;
@@ -24,7 +24,7 @@ public class Reserva {
     private Date fechaEntrada;
     private Date fechaSalida;
     private Integer cantidadAdultos;
-    private Integer cantidadNiños;
+    private Integer cantidadNinos;
     private Integer cantidadHabitaciones;
     private String peticion;
 

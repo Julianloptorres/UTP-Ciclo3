@@ -1,4 +1,4 @@
-package model.entity;
+package co.equipo1.grupo69.hoteldraco.model.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Habitacion {
     @Id    
     private Integer numerohabitacion; //cambie el id generado automaticamente por el numero de la habitacion con id 

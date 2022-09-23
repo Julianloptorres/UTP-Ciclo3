@@ -1,14 +1,14 @@
-package Service.impl;
+package co.equipo1.grupo69.hoteldraco.Service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import Service.ConfirmacionReservaService;
+import co.equipo1.grupo69.hoteldraco.Service.ConfirmacionReservaService;
 import co.equipo1.grupo69.hoteldraco.controller.dto.ReservaDto;
+import co.equipo1.grupo69.hoteldraco.model.entity.Reserva;
+import co.equipo1.grupo69.hoteldraco.model.repository.ReservaRepository;
 import lombok.AllArgsConstructor;
-import model.entity.Reserva;
-import model.repository.ReservaRepository;
 
 @AllArgsConstructor
 @Service

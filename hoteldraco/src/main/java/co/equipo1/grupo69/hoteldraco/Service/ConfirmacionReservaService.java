@@ -1,9 +1,9 @@
-package Service;
+package co.equipo1.grupo69.hoteldraco.Service;
 
 import java.util.List;
 
 import co.equipo1.grupo69.hoteldraco.controller.dto.ReservaDto;
-import model.entity.Reserva;
+import co.equipo1.grupo69.hoteldraco.model.entity.Reserva;
 
 public interface ConfirmacionReservaService {
 
