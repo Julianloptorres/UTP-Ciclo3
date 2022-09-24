@@ -87,18 +87,18 @@
   <!-- Reservas -->
   
   <div class="book">
-    <form>
+    <form action="/confirmarFechas" method="post" name="formFechas"> 
         <label class= "etiqueta" for="checkin-date">Entrada <i class="fa fa-calendar"></i> </label>
-        <input type="date" id="chekin-date">
+        <input id="chekin-date" name="fechaEntrada" type="date" >
         <label class= "etiqueta" for="checkout-date">Salida <i class="fa fa-calendar"></i> </label>
-        <input type="date" id="chekout-date">
-        <label class= "etiqueta" for="adult">Adultos <i class="fa fa-male"></i> <i class="fa fa-female"></i> </label>
-        <input type="number" min="1" value="1" id="adulto">
-        <label class= "etiqueta" for="children">Niños <i class="fa fa-child"></i> </label>
-        <input type="number" min="0" value="0" id="niños">
+        <input id="chekout-date" name="fechaSalida" type="date" >
+        <label class= "etiqueta" for="adultos">Adultos <i class="fa fa-male"></i> <i class="fa fa-female"></i> </label>
+        <input id="adulto" name="cantidadAdultos" type="number" min="1" value="1" >
+        <label class= "etiqueta" for="ninos">Niños <i class="fa fa-child"></i> </label>
+        <input id="ninos" name="cantidadNinos" type="number" min="0" value="0" >
         <label class= "etiqueta" for="rooms">Habitaciones <i class="fa fa-hotel"></i></label>
-        <input type="number" min="1" value="1" id="habitacion">
-        <a href="/habitaciones"><button type="button" class="btn">RESERVAR</button></a>       
+        <input id="habitacion" name="cantidadhabitaciones" type="number" min="1" value="1" >
+        <button type="submit" class="btn">RESERVAR</button>       
     </form>
   </div>
 

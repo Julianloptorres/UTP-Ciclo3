@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Habitacion {
     @Id    
-    private Integer numerohabitacion; //cambie el id generado automaticamente por el numero de la habitacion con id 
+    private Integer numerohabitacion; //cambio del id generado automaticamente por el numero de la habitacion con id 
     
     private Double precio ;
     private String tipoHabitacion ;

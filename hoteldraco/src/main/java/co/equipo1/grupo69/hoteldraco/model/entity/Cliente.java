@@ -24,26 +24,15 @@ public class Cliente {
      @GeneratedValue(strategy = GenerationType.AUTO)
      private Integer id;
      
-     @Column(name= "Nombre")
+     
      private String nombre;
-
-     @Column(name= "Apellidos")
      private String apellidos;
-
-     @Column(name = "Correo")
-     private String correo;
-
-     @Column(name = "Direccion")
-     private String direccion;
-
-     @Column(name = "Ciudad")
-     private String ciudad;
-
-     @Column(name= "Pais")
-     private String pais;
-
-     @Column(name="Telefono")
+     private String email;    
+     private String direccion;     
+     private String ciudad;     
+     private String pais;   
      private String telefono;
+     private String peticion;
     
      @OneToMany(mappedBy = "cliente")
      private List <Reserva> reserva;

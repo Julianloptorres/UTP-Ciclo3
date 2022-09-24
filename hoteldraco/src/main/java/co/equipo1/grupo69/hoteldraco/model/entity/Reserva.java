@@ -26,7 +26,7 @@ public class Reserva {
     private Integer cantidadAdultos;
     private Integer cantidadNinos;
     private Integer cantidadHabitaciones;
-    private String peticion;
+    
 
     @ManyToOne
     private Cliente cliente;
