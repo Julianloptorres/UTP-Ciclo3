@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,7 +24,9 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private Date fechaEntrada;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date fechaEntrada ;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaSalida;
     private Integer cantidadAdultos;
     private Integer cantidadNinos;
