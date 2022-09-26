@@ -1,9 +1,7 @@
-package model.entity;
+package co.equipo1.grupo69.hoteldraco.model.entity;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,15 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Habitacion {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @Id    
+    private Integer numerohabitacion; //cambio del id generado automaticamente por el numero de la habitacion con id 
     
     private Double precio ;
     private String tipoHabitacion ;
     
-    @ManyToOne
-    private Reserva reserva;
 }

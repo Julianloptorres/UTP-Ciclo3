@@ -1,13 +1,12 @@
-package model.entity;
+package co.equipo1.grupo69.hoteldraco.model.entity;
 import java.sql.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +17,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,16 +25,15 @@ public class Reserva {
     private Date fechaEntrada;
     private Date fechaSalida;
     private Integer cantidadAdultos;
-    private Integer cantidadNiños;
+    private Integer cantidadNinos;
     private Integer cantidadHabitaciones;
-    private String peticion;
-    @ManyToOne
-    private Cliente cliente;
-    @OneToOne(mappedBy = "reserva")
-    private Habitacion habitacion;
     
 
+    @ManyToOne
+    private Cliente cliente;
 
-
+    @OneToOne
+    @JoinColumn(name= "habitacion_numerohabitacion")
+    private Habitacion habitacion; 
     
 }

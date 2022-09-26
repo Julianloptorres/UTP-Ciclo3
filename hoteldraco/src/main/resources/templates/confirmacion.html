@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Confirmación de Reserva</h1>
+    <table>
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td th:text="${infoCliente.nombre}">.</td>
+        </tr>
+        <tr>
+            <td>Apellidos</td>
+            <td th:text="${infoCliente.apellidos}">.</td>
+        </tr>
+        <tr>
+            <td>Correo</td>
+            <td th:text="${infoCliente.email}">.</td>
+        </tr>
+        <tr>
+            <td>Direccion de Residencia</td>
+            <td th:text="${infoCliente.direccion}">.</td>
+        </tr>
+        <tr>
+            <td>Ciudad de Residencia</td>
+            <td th:text="${infoCliente.ciudad}">.</td>
+        </tr>
+        <tr>
+            <td>País de Residencia</td>
+            <td th:text="${infoCliente.pais}">.</td>
+        </tr>
+        <tr>
+            <td>Telefono de Contacto</td>
+            <td th:text="${infoCliente.telefono}">.</td>
+        </tr>
+        <tr>
+            <td>Peticion</td>
+            <td th:text="${infoCliente.peticion}">.</td>
+        </tr>
+    </table>
+</body>
+</html>

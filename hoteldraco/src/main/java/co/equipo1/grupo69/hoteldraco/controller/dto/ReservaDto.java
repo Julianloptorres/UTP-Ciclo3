@@ -9,15 +9,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class ReservaDto {
-    
+public class ReservaDto {   
     private Integer id;
-
     private Date fechaEntrada;
     private Date fechaSalida;
     private Integer cantidadAdultos;
-    private Integer cantidadNiños;
+    private Integer cantidadNinos;
     private Integer cantidadHabitaciones;
-    private String peticion;
+    
 }

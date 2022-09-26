@@ -7,16 +7,16 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class ClienteDto {
     private Integer id;
      
     private String nombre ;
     private String apellidos;
-    private String correo;
+    private String email;
     private String direccion;
     private String ciudad;
     private String pais;
     private String telefono;
+    private String peticion;
     
 }

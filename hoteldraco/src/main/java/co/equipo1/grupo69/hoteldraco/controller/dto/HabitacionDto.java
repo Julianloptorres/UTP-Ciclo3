@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class HabitacionDto {
-private Integer id;
-    
+    private Integer id;    
     private Double precio ;
     private String tipoHabitacion ;}
