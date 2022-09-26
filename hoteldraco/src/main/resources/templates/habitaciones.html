@@ -46,7 +46,8 @@
     </nav>
   </div>
 <div class="container">
-  <div>
+  
+  <div th:if = "${infoReserva !=null}">
     <h3>Fecha de entrada</h3>
     <p th:text="${infoReserva.fechaEntrada}">.</p>
     <h3>Fecha de Salida</h3>
