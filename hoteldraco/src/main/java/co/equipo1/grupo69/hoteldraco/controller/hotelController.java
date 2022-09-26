@@ -40,7 +40,7 @@ public class HotelController {
 
     @GetMapping("/pay-form")
     public String goToPayForm(Model model){
-        model.addAttribute("entrada", "30 de Noviembre 2022");
+        model.addAttribute("entrada", "30 de Noviembre 2022"); // esto es solo para ver donde debe ir los datos de la reserva
         model.addAttribute("salida", "12 de Diciembre 2022");
         model.addAttribute("adultos", "2");
         model.addAttribute("childrem", "3");
