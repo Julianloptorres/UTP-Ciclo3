@@ -1,7 +1,7 @@
 package co.equipo1.grupo69.hoteldraco.model.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +18,4 @@ public class Habitacion {
     private Double precio ;
     private String tipoHabitacion ;
     
-    @ManyToOne
-    private Reserva reserva;
 }
