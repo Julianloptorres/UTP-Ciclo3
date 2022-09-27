@@ -59,7 +59,7 @@ public class HotelController {
         return "habitaciones";
     }
 
-    @PostMapping("/irPago")
+    @PostMapping("/irPago1")
     public String postIrPago(@ModelAttribute HabitacionDto habitacion, Model model){
         model.addAttribute("infoHabitacion", habitacion);
         return "pay-form";

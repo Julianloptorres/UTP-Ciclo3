@@ -11,7 +11,8 @@ public interface ConfirmacionReservaService {
 
     List<ReservaDto> findByClienteId(Integer clienteId);
 
-    void saveReserva(ReservaDto reserva);
+    void saveReserva(ReservaDto reserva);  
+    
     void saveHabitacion(HabitacionDto habitacion);
 
     void saveCliente(ClienteDto cliente); // guarda el cliente 

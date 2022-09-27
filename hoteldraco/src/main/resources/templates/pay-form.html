@@ -91,7 +91,7 @@
                         <div class="row">
                             <div class="col-12 form-izq">
                                 <section class="tipo_habitacion">
-                                    <h2 class="h2-form">Habitación doble</h2>
+                                    <h2 class="h2-form" th:text="${infoHabitacion.tipoHabitacion}">Habitación</h2>
                                     <form action="#" target="" method="get" name="formTipoHabitacion">
                                         <div>
                                             <label>Noches</label>
@@ -99,7 +99,7 @@
                                         </div>
                                         <div>
                                             <label>Valor noche</label>
-                                            <label class="label-info" th:text="${valorNoche}">$ 120.000</label>
+                                            <label class="label-info" th:text="${infoHabitacion.precio}">$ 120.000</label>
                                         </div>
                                         <div>
                                             <label>Total</label>

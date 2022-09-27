@@ -10,11 +10,6 @@ public interface HabitacionRepository extends JpaRepository <Habitacion, Integer
     
     Optional<Habitacion> findById (Integer habitacionId);
     List<Habitacion> findByNumerohabitacion(Integer numerohabitacion);
-    List<Habitacion> findByPrecio(Double precio);
-    /**
-     * @param list
-     * @return
-     */
-    List<Habitacion> saveHabitacions(List<Habitacion> list);
+   
 
 }
