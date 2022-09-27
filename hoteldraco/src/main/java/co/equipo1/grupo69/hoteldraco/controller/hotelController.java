@@ -55,7 +55,7 @@ public class HotelController {
     public String postConfirmarFechas(@ModelAttribute ReservaDto reserva, Model model){
         model.addAttribute("infoReserva", reserva); // da error [Error al convertir el valor de propiedad del tipo 'java.lang.String' al tipo requerido 'java.util.Date'
 
-        return "prueba";
+        return "habitaciones";
     }
 
     @PostMapping("/confirmarReserva")

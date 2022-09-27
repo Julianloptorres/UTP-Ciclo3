@@ -47,11 +47,11 @@
   </div>
 <div class="container">
   
-  <div th:if = "${infoReserva !=null}">
-    <h3>Fecha de entrada</h3>
-    <p th:text="${infoReserva.fechaEntrada}">.</p>
-    <h3>Fecha de Salida</h3>
-    <p th:text="${infoReserva.fechaSalida">.</p>    
+  <div id="info" th:if = "${infoReserva !=null}">
+    <span>Fecha de entrada: </span><span th:text="${infoReserva.fechaEntrada}">.</span>
+    <span>Fecha de Salida: </span><span th:text="${infoReserva.fechaSalida}">.</span>
+    <span>Adultos: </span><span th:text="${infoReserva.cantidadAdultos}">.</span> 
+    <span>Niños: </span><span th:text="${infoReserva.cantidadNinos}">.</span>        
   </div>
   
   <section class = "rooms sec-width" id = "rooms">
