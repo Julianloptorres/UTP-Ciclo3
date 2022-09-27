@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import co.equipo1.grupo69.hoteldraco.Service.ConfirmacionReservaService;
 import co.equipo1.grupo69.hoteldraco.controller.dto.ClienteDto;
 import co.equipo1.grupo69.hoteldraco.controller.dto.ReservaDto;
+import co.equipo1.grupo69.hoteldraco.controller.dto.HabitacionDto;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -58,6 +59,13 @@ public class HotelController {
         return "habitaciones";
     }
 
+    @PostMapping("/irPago")
+    public String postIrPago(@ModelAttribute HabitacionDto habitacion, Model model){
+        model.addAttribute("infoHabitacion", habitacion);
+        return "pay-form";
+
+    }
+
     @PostMapping("/confirmarReserva")
     public String postConfirmarReserva(@ModelAttribute ClienteDto cliente, Model model){
         log.info(cliente.toString()); //para mostrar la informacion del cliente en consola
@@ -67,6 +75,8 @@ public class HotelController {
 
         return "confirmacion";
     }
+
+
 
 
 }

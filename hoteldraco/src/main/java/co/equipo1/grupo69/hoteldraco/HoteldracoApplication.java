@@ -30,13 +30,13 @@ public class HoteldracoApplication {
 			
 		}
 
-		// private void loadHabitaciones(){ //Guarda la informacion de las habitaciones 
+		private void loadHabitaciones(){ //Guarda la informacion de las habitaciones 
 
-		// 	habitacionRepository.save(new Habitacion(101, 60.2, "Sencilla", null));
-		// 	habitacionRepository.save(new Habitacion(201, 70.2, "Doble", null));
-		// 	habitacionRepository.save(new Habitacion(301, 160.2, "King", null));
+			habitacionRepository.save(new Habitacion(101, 60.2, "Sencilla", null));
+			habitacionRepository.save(new Habitacion(201, 70.2, "Doble", null));
+			habitacionRepository.save(new Habitacion(301, 160.2, "King", null));
 
-		// }
+		}
 
 
 	}
