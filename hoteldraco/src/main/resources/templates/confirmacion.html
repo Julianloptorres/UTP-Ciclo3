@@ -4,47 +4,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Confirmación de Reserva</title>
+    <link rel="shortcut icon" href="/img/iconos/head.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" href = "/css/confirmacion.css" type="text/css">
 </head>
 <body>
-    <h1>Confirmación de Reserva</h1>
-    <table>
-        <tr>
-            <th>Campo</th>
-            <th>Valor</th>
-        </tr>
-        <tr>
-            <td>Nombre</td>
+
+         <!-- Encabezado -->
+  <div class="head-top">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar" >
+      <div class="container-fluid">
+      <a class="navbar-brand d-flex" href="#">
+      <img src="/img/iconos/icono.png" alt="logo" width="100">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      
+        <div class="d-flex" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="/" class="nav-link" aria-current="page">
+                      <img src="/img/iconos/inicio1.png" alt="inicio" width="35" height="30"
+                        class="d-inline-block align-text-top">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="habitaciones.html"><img src="/img/iconos/habitaciones.png"
+                        alt="habitaciones" width="35" height="30"
+                        class="d-inline-block align-text-top">Habitaciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#about"><img src="/img/iconos/quienessomos.png"
+                        alt="quienes-somos" width="35" height="30" class="d-inline-block align-text-top">¿Quiénes
+                    somos?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto"><img src="/img/iconos/contactenos.png"
+                        alt="contactenos" width="35" height="30"
+                        class="d-inline-block align-text-top">Contáctenos</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+<!-- Confirmación -->
+
+<div class="container-md pb-5">
+
+    <table class="table table-bordered table-hover table-light">
+        <thead class="table">
+          <tr>
+            <th scope="row" style="color:#fff"><h4>Confirmación de Reserva</h4></th>
+          </tr>
+        </thead>
+
+    <table class="table table-bordered table-hover table-light">    
+        <tbody>
+          <tr>
+            <th scope="row">Nombre</th>
             <td th:text="${infoCliente.nombre}">.</td>
-        </tr>
-        <tr>
-            <td>Apellidos</td>
-            <td th:text="${infoCliente.apellidos}">.</td>
-        </tr>
-        <tr>
-            <td>Correo</td>
+            </tr>
+
+          <tr>
+            <th scope="row">Apellidos</th>
+            <td th:text="${infoCliente.apellidos}">.</td> 
+            </tr>
+
+          <tr>
+            <th scope="row">Correo</th>
             <td th:text="${infoCliente.email}">.</td>
-        </tr>
-        <tr>
-            <td>Direccion de Residencia</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Dirección de Residencia</th>
             <td th:text="${infoCliente.direccion}">.</td>
-        </tr>
-        <tr>
-            <td>Ciudad de Residencia</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Ciudad de Residencia</th>
             <td th:text="${infoCliente.ciudad}">.</td>
-        </tr>
-        <tr>
-            <td>País de Residencia</td>
+          </tr>
+
+          <tr>
+            <th scope="row">País de Residencia</th>
             <td th:text="${infoCliente.pais}">.</td>
-        </tr>
-        <tr>
-            <td>Telefono de Contacto</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Telefono de Contacto</th>
             <td th:text="${infoCliente.telefono}">.</td>
-        </tr>
-        <tr>
-            <td>Peticion</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Peticion</th>
             <td th:text="${infoCliente.peticion}">.</td>
-        </tr>
-    </table>
+          </tr>
+
+        </tbody>
+      </table>
+
+</div>
+
+    <!-- footer -->
+<br>
+<br>      
+  <div class="container-fluid"></div>
+  <footer class="footer">
+    <a class="navbar-brand d-flex" href="#"></a>
+    <div>
+      <h2>Contáctanos</h2>
+      <div class="contact-item" id="contacto">
+        <span>
+          <a href="https://twitter.com/home?lang=es"><i class="fa fa-twitter f-2x"></i></a>
+          <a href="https://www.facebook.com"><i class="fa fa-facebook f-2x"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram f-2x"></i></a>
+        </span>
+        <span>
+          <i class="fas fa-phone-alt"></i>
+          +571234567890
+        </span>
+        <span>
+          <a href="mailto:info@correo.com.co"><i class="fas fa-envelope"></i></a>
+          info@correo.com.co
+        </span>        
+        
+        <span>
+          <i class="fas fa-map-marker-alt"></i>
+          Calle 1 #1 - 1, Pereira, Risaralda, Colombia
+        </span>
+      </div>
+        
+      <div class= "copy">
+        <span>
+          © 2022 by Equipo 1 Grupo 69 MisionTic UTP
+        </span>
+      </div>       
+    </div>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+   <script src="script.js"></script> 
 </body>
 </html>
