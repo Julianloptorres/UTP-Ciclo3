@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+</head>
+<body>
+    <form action="/reserva" method="get">
+        <label class= "etiqueta" for="checkin-date">Entrada <i class="fa fa-calendar"></i> </label><br>
+        <input name="checkin" type="date" id="chekin-date"><br>
+        <label class= "etiqueta" for="checkout-date">Salida <i class="fa fa-calendar"></i> </label><br>
+        <input name="checkout" type="date" id="chekout-date" ><br>
+        <label class= "etiqueta" for="adult">Adultos <i class="fa fa-male"></i> <i class="fa fa-female"></i> </label><br>
+        <input name="adultos" type="number" min="1" value="1" id="adulto"><br>
+        <label class= "etiqueta" for="children">Niños <i class="fa fa-child"></i> </label><br>
+        <input name="ninos" type="number" min="0" value="0" id="niños"><br>
+        <label class= "etiqueta" for="rooms">Habitaciones <i class="fa fa-hotel"></i></label><br>
+        <input name="habitaciones"type="number" min="1" value="1" id="habitacion"><br>
+        <a href="#"><button type="submit" class="btn">RESERVAR</button></a>       
+    </form>
+    
+</body>
+</html>

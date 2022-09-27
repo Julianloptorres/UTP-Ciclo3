@@ -19,5 +19,5 @@ public class ReservaDto {
     private Integer cantidadAdultos;
     private Integer cantidadNiños;
     private Integer cantidadHabitaciones;
-    private String peticion;
+    // private String peticion;
 }

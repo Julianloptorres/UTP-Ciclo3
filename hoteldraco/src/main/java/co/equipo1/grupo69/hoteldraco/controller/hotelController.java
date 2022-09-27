@@ -2,7 +2,9 @@ package co.equipo1.grupo69.hoteldraco.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
+import co.equipo1.grupo69.hoteldraco.controller.dto.ReservaDto;
 import lombok.AllArgsConstructor;
 
 //Spring MVC
@@ -49,5 +51,12 @@ public class HotelController {
         model.addAttribute("valorNoche", "100.000");
         model.addAttribute("total", "1'200.000");
         return "pay-form";
+    }
+
+    @GetMapping("/reserva")
+    public String goToReserva(@ModelAttribute ReservaDto reserva, Model model) {
+        // log.info( "filter: {}", reserva.toString());
+        
+        return "reserva";
     }
 }

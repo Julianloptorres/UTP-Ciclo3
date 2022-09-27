@@ -1,5 +1,5 @@
 package co.equipo1.grupo69.hoteldraco.model.entity;
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
