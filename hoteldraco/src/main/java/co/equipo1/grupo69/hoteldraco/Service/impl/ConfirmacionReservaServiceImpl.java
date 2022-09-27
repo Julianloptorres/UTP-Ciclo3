@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import co.equipo1.grupo69.hoteldraco.Service.ConfirmacionReservaService;
 import co.equipo1.grupo69.hoteldraco.controller.dto.ClienteDto;
+import co.equipo1.grupo69.hoteldraco.controller.dto.HabitacionDto;
 import co.equipo1.grupo69.hoteldraco.controller.dto.ReservaDto;
 import co.equipo1.grupo69.hoteldraco.model.entity.Cliente;
 import co.equipo1.grupo69.hoteldraco.model.repository.ClienteRepository;
@@ -45,6 +46,12 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
         entity.setPeticion(cliente.getPeticion());
 
         clienteRepository.save(entity);
+    }
+
+    @Override
+    public void saveHabitacion(HabitacionDto habitacion) {
+        // TODO Auto-generated method stub
+        
     }
     
 }
