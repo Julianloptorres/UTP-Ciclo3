@@ -1,24 +1,8 @@
 const recuperarDatos = () => {
-    let datos = JSON.stringify(localStorage.getItem("reserva"));
-    console.log(datos);
-    document.getElementById("adultos").innerHTML = datos;
+    
+    document.getElementById("chekin-date").innerText = JSON.parse(localStorage.getItem("fechaIngreso"));
+    document.getElementById("chekout-date").innerText = JSON.parse(localStorage.getItem("fechaSalida"));
+    document.getElementById("adultos").innerText = JSON.parse(localStorage.getItem("adultos"));
+    document.getElementById("ninos").innerText = JSON.parse(localStorage.getItem("ninos"));
+    document.getElementById("habitaciones").innerText = JSON.parse(localStorage.getItem("habitaciones"));
     }
-
-
-
-    // datos.array.forEach(element => {
-    //     document.getElementById("adultos").innerText 
-    // });
-//     document.getElementById("adultos").innerText = JSON.parse(localStorage.getItem("adultos"));
-//     document.getElementById("ninos").innerText = reserva.getItem("ninos");
-//     // document.getElementById("detail-duration").innerText
-//     // JSON.parse(localStorage.getItem("storeData"));
-//     // document.getElementById("detail-title").innerText = movieInfo.title;
-// }
-
-// const imprimirDatos = () => {
-
-//     datos.array.forEach(element => {
-        
-//     });
-// }

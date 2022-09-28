@@ -15,15 +15,19 @@ const loadFechas = () => {
 }
 
 const guardarReserva = () => {
-    let reserva = {
-        fechaIngreso: document.getElementById("chekin-date").value,
-        fechaSalida: document.getElementById("chekout-date").value,
-        adultos: document.getElementById("adulto").value,
-        ninos: document.getElementById("ninos").value,
-        habitaciones: document.getElementById("habitacion").value
+    
+        let fechaIngreso= document.getElementById("chekin-date").value;
+        let fechaSalida= document.getElementById("chekout-date").value;
+        let adultos= document.getElementById("adulto").value;
+        let ninos= document.getElementById("ninos").value;
+        let habitaciones= document.getElementById("habitacion").value;
 
-    };
+    
 
-    localStorage.setItem("reserva", JSON.stringify(reserva));
+    localStorage.setItem("fechaIngreso", JSON.stringify(fechaIngreso));
+    localStorage.setItem("fechaSalida", JSON.stringify(fechaSalida));
+    localStorage.setItem("adultos", JSON.stringify(adultos));
+    localStorage.setItem("ninos", JSON.stringify(ninos));
+    localStorage.setItem("habitaciones", JSON.stringify(habitaciones));
 }
 
