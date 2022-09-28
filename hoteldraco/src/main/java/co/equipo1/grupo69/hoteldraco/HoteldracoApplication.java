@@ -1,5 +1,6 @@
 package co.equipo1.grupo69.hoteldraco;
 
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,17 +27,27 @@ public class HoteldracoApplication {
 
 		@Override		
 		public void run(String... args) throws Exception {
-			// TODO Auto-generated method stub
+			//loadHabitaciones();
 			
 		}
 
-		// private void loadHabitaciones(){ //Guarda la informacion de las habitaciones 
+		private void loadHabitaciones(){ //Guarda la informacion de las habitaciones 
+			
+				habitacionRepository.save(new Habitacion(101, 60.2, "Sencilla"));
+				habitacionRepository.save(new Habitacion(102, 60.2, "Sencilla"));
+				habitacionRepository.save(new Habitacion(103, 60.2, "Sencilla"));
+				habitacionRepository.save(new Habitacion(104, 60.2, "Sencilla"));
+				habitacionRepository.save(new Habitacion(105, 60.2, "Sencilla"));
+			
+				habitacionRepository.save(new Habitacion(201, 70.2, "Doble"));
+				habitacionRepository.save(new Habitacion(202, 70.2, "Doble"));
+				habitacionRepository.save(new Habitacion(203, 70.2, "Doble"));
+				habitacionRepository.save(new Habitacion(204, 70.2, "Doble"));
+	
+				habitacionRepository.save(new Habitacion(301, 160.2, "King"));
+	
 
-		// 	habitacionRepository.save(new Habitacion(101, 60.2, "Sencilla", null));
-		// 	habitacionRepository.save(new Habitacion(201, 70.2, "Doble", null));
-		// 	habitacionRepository.save(new Habitacion(301, 160.2, "King", null));
-
-		// }
+		}
 
 
 	}
