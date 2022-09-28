@@ -1,5 +1,5 @@
-const loadfechas = () => {
-    var date = new Date();
+const loadFechas = () => {
+    let date = new Date();
 
         var day = date.getDate();
         var month = date.getMonth() + 1;
@@ -13,3 +13,17 @@ const loadfechas = () => {
         document.getElementById("chekin-date").value = init_date
         document.getElementById("chekout-date").value = init_date
 }
+
+const guardarReserva = () => {
+    let reserva = {
+        fechaIngreso: document.getElementById("chekin-date").value,
+        fechaSalida: document.getElementById("chekout-date").value,
+        adultos: document.getElementById("adulto").value,
+        ninos: document.getElementById("ninos").value,
+        habitaciones: document.getElementById("habitacion").value
+
+    };
+
+    localStorage.setItem("reserva", JSON.stringify(reserva));
+}
+
