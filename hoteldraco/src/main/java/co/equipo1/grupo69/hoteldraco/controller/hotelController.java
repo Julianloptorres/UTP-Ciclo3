@@ -33,7 +33,7 @@ public class HotelController {
     public String goToDoble(Model model){
         return "room2";
     }
-
+//comentario para grabar
     @GetMapping("/king")
     public String goToKing(Model model){
         return "habitacion_king";
