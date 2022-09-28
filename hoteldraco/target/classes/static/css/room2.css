@@ -1,0 +1,74 @@
+/*Ajustes globales del codigo*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  body{
+    line-height: 1.6;
+    background-color:#164773;
+  }
+  
+  /*encabezado */
+  .navbar{
+    background-color:#0B2B40;
+    color: #fff;
+    width:100%;
+  }
+  
+  .nav-link{
+  color: #fff;  
+  }
+
+  .container-md {
+  background-color:#F2F2F2;
+  }
+  
+  /*Carrusel*/
+  
+  .carousel-indicators [data-bs-target] {
+    position: relative;
+    width: 60px;
+    height: 6px;
+    border: none;
+    border-radius: 24px;
+  }
+  
+  .carousel-indicators [data-bs-target] span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #7952b3;
+    border-radius: inherit;
+  }  
+  
+  /*Pie de pagina y contacto*/
+  .footer{
+      background: #0B2B40;
+      color: #fff;
+      text-align: center;
+      display: grid;
+      padding:10px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+    }
+    
+    .contact-item span{
+      display: block;
+    }
+    
+    a {
+      color:#fff;
+    }
+    
+    a:hover{
+      color:rgba(255, 255, 255, 0.445);
+    }
+    
+    .copy{
+      margin-top: 20px;
+    }

@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* formato de las 3 columnas de los 
+formularios*/
+.form-col {
+	height: 650px;
+	background-color: #F2F2F2;
+    margin-top: 1%;
+	margin-bottom: 1%;
+	padding-top: 1%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+
+#logo-form {
+	height: 100px;
+}
+
+.form-izq {
+	height: 300px;
+}
+
+.detalle-reserva {
+    width: 100%;    
+}
+
+.tipo_habitacion {
+    width: auto;
+    
+}
+.formulario-huesped {
+    width: 99%;
+    
+}
+
+.formulario-pago {
+    width: 99%;
+    height: 590px;
+      
+}
+
+.h2-form {
+    background: #0B2B40;
+	text-decoration: dashed;
+    color: #F2F2F2;
+    text-align: center;
+	margin: 0px;
+}
+
+form{
+	width:100%;
+	padding:2%;
+	margin:auto;
+	background-color:#164773;
+}
+
+form label{
+	width:30%;
+	font-weight:bold;
+	display:inline-block;
+	color: #F2F2F2;
+}
+.label-info {
+	width: 62%;
+	text-align: end;
+	margin: 8px 0;
+    display: inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:60%;
+	padding:1% 2%;
+	border:1px solid #0B2B40;
+	border-radius:3px;
+	background-color:#F2F2F2;
+	margin:8px 0;
+	display:inline-block;
+    color: #27242a;
+}
+
+.tipo_habitacion form input[type="text"]{
+	width:60%;
+	padding:3px 10px;
+    text-align: right;
+	border:1px solid #0B2B40;
+	border-radius:3px;
+	background-color:#F2F2F2;
+	margin:8px 0;
+	display:inline-block;
+    color: #27242a;
+
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:15px;
+	border:1px solid #164773;
+	border-radius:3%;
+	display:block;
+	color:#F2F2F2;
+	background-color:#0B2B40;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+    padding:1% 2%;
+	border:1% solid #0B2B40;
+	border-radius:1%;
+	background-color:#F2F2F2;			
+	margin:8px 0;
+	resize:none;
+	display:block;
+}
