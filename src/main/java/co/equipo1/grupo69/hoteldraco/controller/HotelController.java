@@ -33,10 +33,15 @@ public class HotelController {
     public String goToDoble(Model model){
         return "room2";
     }
-//comentario para grabar
+
     @GetMapping("/king")
     public String goToKing(Model model){
         return "habitacion_king";
+    }
+
+    @GetMapping("/registro")
+    public String goToRegistro(Model model){
+        return "registro";
     }
 
     @GetMapping("/pay-form")
