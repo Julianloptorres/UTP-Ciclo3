@@ -46,10 +46,6 @@ public class HotelController {
 
     @GetMapping("/pay-form")
     public String goToPayForm(Model model){
-        model.addAttribute("entrada", "30 de Noviembre 2022"); // esto es solo para ver donde debe ir los datos de la reserva
-        model.addAttribute("salida", "12 de Diciembre 2022");
-        model.addAttribute("adultos", "2");
-        model.addAttribute("childrem", "3");
         model.addAttribute("noches", "12");
         model.addAttribute("valorNoche", "100.000");
         model.addAttribute("total", "1'200.000");
@@ -59,7 +55,7 @@ public class HotelController {
 
     @PostMapping("/confirmarFechas")
     public String postConfirmarFechas(@ModelAttribute ReservaDto reserva, Model model){
-        model.addAttribute("infoReserva", reserva); // da error [Error al convertir el valor de propiedad del tipo 'java.lang.String' al tipo requerido 'java.util.Date'
+        model.addAttribute("infoReserva", reserva); 
 
         return "habitaciones";
     }
