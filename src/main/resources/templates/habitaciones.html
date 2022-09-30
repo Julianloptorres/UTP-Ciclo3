@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones</title>
+    <link rel="shortcut icon" href="/img/iconos/head.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "/css/habitaciones.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+     <!-- Encabezado -->
+  <div class="head-top">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar" >
+      <div class="container-fluid">
+      <a class="navbar-brand d-flex" href="#">
+      <img src="/img/iconos/icono.png" alt="logo" width="100">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      
+        <div class="d-flex" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="/" class="nav-link" aria-current="page">
+                      <img src="/img/iconos/inicio1.png" alt="inicio" width="35" height="30"
+                        class="d-inline-block align-text-top">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="habitaciones.html"><img src="/img/iconos/habitaciones.png"
+                        alt="habitaciones" width="35" height="30"
+                        class="d-inline-block align-text-top">Habitaciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#about"><img src="/img/iconos/quienessomos.png"
+                        alt="quienes-somos" width="35" height="30" class="d-inline-block align-text-top">¿Quiénes
+                    somos?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto"><img src="/img/iconos/contactenos.png"
+                        alt="contactenos" width="35" height="30"
+                        class="d-inline-block align-text-top">Contáctenos</a></li>
+<!-----Log In----->
+<button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ModalForm">
+  Ingresa o registrate
+  </button>
+  <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+  <div class="modal-body">
+  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="myform">
+  <h1 class="text-center">Ingresa</h1>
+  <form>
+  <div class="mb-3 mt-4">
+  <label for="exampleInputEmail1" class="form-label">Correo</label>
+  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+  <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn mt-3 rounded-4">Ingresar</button>
+  <p>Aun no eres miembro? <a href="/registro">Registrate</a></p>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </ul>
+  </div>
+  </div>
+  </nav>
+<div class="container">
+  
+  <div id="info" th:if = "${infoReserva !=null}">
+    <span>Fecha de entrada: </span><span th:text="${infoReserva.fechaEntrada}">.</span>
+    <span>Fecha de Salida: </span><span th:text="${infoReserva.fechaSalida}">.</span>
+    <span>Adultos: </span><span th:text="${infoReserva.cantidadAdultos}">.</span> 
+    <span>Niños: </span><span th:text="${infoReserva.cantidadNinos}">.</span>        
+  </div>
+  
+  <section class = "rooms sec-width" id = "rooms">
+    <div class=rooms-container>
+            <!-- Junior room -->      
+        <article class = "room">
+            <div class = "room-image">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="/img/Habitacion-sencilla/imagen1.jpg" class="d-block w-100" height="500"  alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion Junior</h5>
+                            <p>foto1</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/Habitacion-sencilla/imagen2.jpg" class="d-block w-100" height="500"  alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion Junior</h5>
+                            <p>foto2.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/Habitacion-sencilla/imagen3.jpg" class="d-block w-100" height="500"  alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion Junior</h5>
+                            <p>foto3.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/Habitacion-sencilla/imagen4.jpg" class="d-block w-100" height="500"  alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion Junior</h5>
+                            <p>foto4</p>
+                          </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+                </div>
+            </div>
+            <div class = "room-text">
+                <div class = "room-text">
+                    <h2>Habitación Junior</h2>
+                    <ul>
+                        <li>
+                            <i class = "fas fa-shower"></i>
+                            Ducha.
+                        </li>
+                        <li>
+                            <i class = "far fa-snowflake"></i>
+                            A.C
+                        </li>
+                        <li>
+                            <i class = "fas fa-wifi"></i>
+                            WIFI
+                        </li>
+                        <li>
+                            <i class = "fas fa-tv"></i>
+                            Televisión
+                        </li>
+                        <li>
+                            <i class = "fas fa-swimming-pool"></i>
+                            Piscina 
+                        </li>
+                        <li>
+                            <i class = "fas fa-coffee"></i>
+                            Café
+                        </li>
+                        <li>
+                            <i class = "fas fa-concierge-bell"></i>
+                            Servicio a la habitación
+                        </li>
+                    </ul>
+                    <p class = "rate">
+                        <span>$99.00 /</span> Por noche
+                    </p>
+                    <form action="/irPago1" method="post">
+                    <input type="radio" value="" id="reservarHabitacion">
+                    <label for="reservarHabitacion">Reserva esta habitación</label>
+                    <a href="/sencilla" class="btn">VER MÁS</a>
+                    <button type="submit" class="btn" id="boton">RESERVAR </button>
+                    </form>
+                </div>
+        </article>
+        <!--  fin Junior room -->
+
+        <!-- Double room -->
+        <article class = "room">
+            <div class = "room-image">
+                <div id="carousel1" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                      <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                          <img src="/img/habitacion-doble/1_doble.jpg" class="d-block w-100" height="500"  alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion Doble</h5>
+                            <p>foto1</p>
+                          </div>
+                        </div>
+
+                        <div class="carousel-item">
+                          <img src="/img/habitacion-doble/2_doble.jpg" class="d-block w-100" height="500" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion Doble</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/habitacion-doble/3_doble.jpg" class="d-block w-100" height="500" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion Doble</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                          </div>
+                        </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+            </div>
+            </div>
+            <div class = "room-text">
+                <h2>Habitación Doble</h2>
+                <ul>
+                  <li>
+                      <i class = "fas fa-bath"></i>
+                      Bañera.
+                  </li>
+                  <li>
+                      <i class = "far fa-snowflake"></i>
+                      A.C
+                  </li>
+                  <li>
+                      <i class = "fas fa-wifi"></i>
+                      WIFI
+                  </li>
+                  <li>
+                      <i class = "fas fa-tv"></i>
+                      Televisión
+                  </li>
+                  <li>
+                      <i class = "fas fa-swimming-pool"></i>
+                      Piscina 
+                  </li>
+                  <li>
+                      <i class = "fas fa-coffee"></i>
+                      Café
+                  </li>
+                  <li>
+                      <i class = "fas fa-concierge-bell"></i>
+                      Servicio a la habitación
+                  </li>
+                  <li>
+                    <i class = "fas fa-utensils"></i>
+                    Desayuno
+                </li>
+                <li>
+                  <i class = "fas fa-bed"></i>
+                  Cama doble
+              </li>
+              </ul>
+                <p class = "rate">
+                    <span>$120.00 /</span> Por noche
+                </p>
+                <form action="/irPago" method="post">
+                <input type="radio" value="" id="reservarHabitacion">
+                    <label for="reservarHabitacion">Reserva esta habitación</label>
+                <a href="/doble" class="btn">VER MÁS</a>
+                <button type="submit" class="btn" id="boton">RESERVAR</button>
+              </form>
+            </div>
+        </article>
+        <!--  fin Double room -->
+
+        <!-- king room -->
+        <article class = "room">
+            <div class = "room-image">
+                <div id="carousel2" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="/img/habitación-king/Imagen1.jpg" class= "d-block w-100" height="500" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion king</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/habitación-king/Imagen2.jpg" class="d-block w-100" height="500" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion king</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/habitación-king/Imagen3.jpg" class="d-block w-100" height="500" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion king</h5>
+                            <p>Muestra de nuestra habitación.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/habitación-king/Imagen4.jpg" class="d-block w-100" height="500" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>King</h5>
+                            <p>Muestra de nuestra habitación.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/habitación-king/Imagen5.jpg" class="d-block w-100" height="500" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitacion king</h5>
+                            <p>Muestra de nuestra habitación.</p>
+                          </div>
+                        </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+            </div>
+            </div>
+            <div class = "room-text">
+                <h2>Habitación King</h2>
+                <ul>
+                  <li>
+                      <i class = "fas fa-bath"></i>
+                      Bañera.
+                  </li>
+                  <li>
+                      <i class = "far fa-snowflake"></i>
+                      A.C
+                  </li>
+                  <li>
+                      <i class = "fas fa-wifi"></i>
+                      WIFI
+                  </li>
+                  <li>
+                      <i class = "fas fa-tv"></i>
+                      Televisión
+                  </li>
+                  <li>
+                      <i class = "fas fa-swimmer"></i>
+                      Piscina privada
+                  </li>
+                  <li>
+                      <i class = "fas fa-coffee"></i>
+                      Café
+                  </li>
+                  <li>
+                      <i class = "fas fa-concierge-bell"></i>
+                      Servicio a la habitación
+                  </li>
+                  <li>
+                    <i class = "fas fa-utensils"></i>
+                    Desayuno
+                </li>
+                <li>
+                  <i class = "fas fa-bed"></i>
+                  Cama king
+              </li>
+              <li>
+                <i class = "fas fa-dumbbell"></i>
+                Gym
+            </li>
+              </ul>
+                <p class = "rate">
+                    <span>$150.00 /</span> Por noche
+                </p>
+                <form action="/irPago" method="post">
+                <input type="radio" value="" id="reservarHabitacion">
+                    <label for="reservarHabitacion">Reserva esta habitación</label>
+                <a href="/king" class="btn">VER MÁS</a>
+                <button type="submit" class="btn" id="boton">RESERVAR </button>
+              </form>
+            </div>
+        </article>
+        <!--  fin king room -->
+    </div>
+ </section>
+</div>
+
+     <!-- footer -->
+ <footer class="footer">
+    <div>
+      <h2>Contáctanos</h2>
+      <div class="contact-item" id="contacto">
+        <span>
+          <a href="https://twitter.com/home?lang=es"><i class="fa fa-twitter f-2x"></i></a>
+          <a href="https://www.facebook.com"><i class="fa fa-facebook f-2x"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram f-2x"></i></a>
+        </span>
+        <span>
+          <i class="fas fa-phone-alt"></i>
+          +571234567890
+        </span>
+        <span>
+          <a href="mailto:info@correo.com.co"><i class="fas fa-envelope"></i></a>
+          info@correo.com.co
+        </span>        
+        
+        <span>
+          <i class="fas fa-map-marker-alt"></i>
+          Calle 1 #1 - 1, Pereira, Risaralda, Colombia
+        </span>
+      </div>
+        
+      <div class= "copy">
+        <span>
+          © 2022 by Equipo 1 Grupo 69 MisionTic UTP
+        </span>
+      </div>       
+    </div>
+  
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+  <script src="script.js"></script> 
+  <script>"/js/habitaciones"</script>
+  </body>
+  
+  </html>

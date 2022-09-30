@@ -1,0 +1,222 @@
+body{  
+  background-color: #164773;
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*encabezado */
+.navbar{
+  background-color:#0B2B40;
+  color: #fff;
+  width:100%;
+}
+
+.nav-link{
+color: #fff;  
+}
+
+
+/* Fotos deslizandoce*/
+.slide{  
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);    
+}
+
+
+/*Formulario de reservas*/
+.book{
+  width: 80%;
+  margin: 30px auto;
+  padding: 40px;
+  background-color: #f2f2f2;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
+  border-radius: 10px; 
+}
+
+#chekin-date{
+  border-radius: 5px;
+  margin:4px;
+  box-shadow: 0px 0px 5px #164773;   
+}
+
+#chekout-date{
+  border-radius: 5px;
+  margin:4px;
+  box-shadow: 0px 0px 5px #164773;   
+}
+
+#adulto{
+  border-radius: 5px;
+  margin:4px;
+  width: 40px;
+  box-shadow: 0px 0px 5px #164773;   
+}
+
+#ninos{
+  border-radius: 5px;
+  margin:4px;
+  width: 40px;
+  box-shadow: 0px 0px 5px #164773;   
+}
+
+#habitacion{
+  border-radius: 5px;
+  margin:4px;
+  width: 40px;
+  box-shadow: 0px 0px 5px #164773;   
+}
+
+.etiqueta {  
+  font-weight: bold;
+  font-size: 18px; 
+}
+
+.btn{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px;
+  display: block;
+  margin: 15px auto;    
+  border: 3px solid black;
+  color: black;
+  box-shadow: 0px 0px 5px #164773;    
+  
+}
+.btn:hover{
+  opacity: 0.85;
+  background: transparent;
+  
+}
+
+/*about*/
+.about {
+  display:flex;
+  background-color: #f2f2f2;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
+}  
+
+.izquierda  {
+  width: 50%;    
+  margin-top: 20px;    
+  padding: 20px;    
+}
+
+.derecha { 
+  margin-top: 40px;   
+  width: 40%;
+  float: right;
+  max-height: auto; 
+  margin-left: 20px;
+  overflow: hidden;
+  padding: 20px;  
+}   
+.about .image2 {
+  width: 100%;
+  height: auto;    
+  bottom: 5px;
+  z-index: 2;  
+} 
+
+/*Customers */
+.customers{    
+  padding: 40px 0;
+  display: flex;
+  text-align: center;       
+}
+
+.customer{
+  background: #f2f2f2;
+  padding: 35px;
+  text-align: center;
+  margin: 24px 0;
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 25px; 
+  
+}
+
+.rating{
+  margin: 10px 0;  
+  color:#e3b155; 
+}
+
+.customer h3{
+  font-size: 25px;
+  text-align: center;
+}
+
+.customer p{
+  opacity: 0.7;
+  line-height: 1.8;
+  width: 60%;
+  margin: 0 auto;  
+}
+
+.customer img{
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin: 25px auto; 
+}
+
+.customer span{
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.customer:hover{
+  transform: translateY(-18px);
+}
+
+@media(min-width: 1000px){
+  .customers-container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+  }
+}
+@media(min-width: 650px){
+  .customers-container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(max-width: 500px){
+  .customer p{
+      width: 100%;
+  }
+  .customer img{
+      width: 100px;
+      height: 100px;
+  }
+}
+/* footer */
+.footer{
+  background: #0B2B40;
+  color: #fff;
+  text-align: center;
+  display: grid;
+  padding:10px;
+  box-shadow: 0px 0px 5px rgba(230, 221, 221, 0.75);
+}
+
+.contact-item span{
+  display: block;
+}
+
+a {
+  color:#fff;
+}
+
+a:hover{
+  color:rgba(255, 255, 255, 0.445);
+}
+
+.copy{
+  margin-top: 20px;
+}
