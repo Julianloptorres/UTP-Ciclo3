@@ -40,10 +40,38 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
     <li class="nav-item"><a class="nav-link" href="#contacto"><img src="/img/iconos/contactenos.png"
                 alt="contactenos" width="35" height="30"
                 class="d-inline-block align-text-top">Contáctenos</a></li>
-    </ul>
-</div>
-</div>
-</nav>
+<!-----Log In----->
+<button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ModalForm">
+  Ingresa o registrate
+  </button>
+  <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+  <div class="modal-body">
+  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="myform">
+  <h1 class="text-center">Ingresa</h1>
+  <form>
+  <div class="mb-3 mt-4">
+  <label for="exampleInputEmail1" class="form-label">Correo</label>
+  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+  <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn mt-3 rounded-4">Ingresar</button>
+  <p>Aun no eres miembro? <a href="/registro">Registrate</a></p>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </ul>
+  </div>
+  </div>
+  </nav>
 </body>
 
 <!-------Habitaciones----->
