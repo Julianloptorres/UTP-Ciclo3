@@ -140,8 +140,8 @@
                             <h2 class="h2-form">Información Huésped</h2>
                             <form action="/confirmarReserva" target="" method="post" name="formDatosPersonales">
                                 <div>                                    
-                                    <input id="entrada" type="date" name="entrada">
-                                    <input id="salida" type="date" name="salida">
+                                    <input id="entrada" type="date" name="entrada" required>
+                                    <input id="salida" type="date" name="salida" required>
                                 </div>
                                 <div>
                                     <select name="habitacion" id="habitacion">
@@ -151,11 +151,11 @@
                                
                                 <div>
                                     <label for="nombre">Nombre</label>
-                                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required/>
                                 </div>
                                 <div>
                                     <label for="apellidos">Apellidos</label>
-                                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" />
+                                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required/>
                                 </div>
                                 <div>
                                     <label for="email">Email</label>
@@ -175,7 +175,7 @@
                                 </div>
                                 <div>
                                     <label for="telefono">Teléfono</label>
-                                    <input type="text" name="telefono" id="telefono" placeholder="Teléfono" />
+                                    <input type="text" name="telefono" id="telefono" placeholder="Teléfono" required/>
                                 </div>
                                 <div>
                                     <label for="peticion">Petición</label>
