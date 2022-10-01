@@ -54,7 +54,7 @@
     <table class="table table-bordered table-hover table-light">
         <thead class="table">
           <tr>
-            <th scope="row" style="color:#fff"><h4>Confirmación de Reserva</h4></th>
+            <th scope="row" style="color:#fff"><h4>Estos son los datos de tu reserva:</h4></th>
           </tr>
         </thead>
 
@@ -113,8 +113,13 @@
             <td th:text="${infoCliente.peticion}">.</td>
           </tr>
 
-        </tbody>
+        </body>
       </table>
+      <div class="btn-group" role="group" aria-label="Basic mixed styles">
+        <button type="button" class="btn btn-danger">Cancelar/borrar tu reserva</button>
+        <button type="button" class="btn btn-warning">Modificar tu reserva</button>
+        <button type="button" class="btn btn-success">Continuar con tu reserva</button>
+      </div>
 
 </div>
 
