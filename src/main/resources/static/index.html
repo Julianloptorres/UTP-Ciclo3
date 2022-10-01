@@ -85,7 +85,7 @@
           <div class="carousel-item active">
             <img src="img/Habitacion-sencilla/imagen2.jpg" class="d-block w-100"  alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Habitación Sencilla</h3>            
+              <h3>Habitación Junior</h3>            
             </div>
           </div>
           <div class="carousel-item">
@@ -115,7 +115,7 @@
   <!-- Reservas -->
   
   <div class="book">
-    <!-- action="/confirmarFechas" method="post" name="formFechas" -->
+    
     <form action="/confirmarFechas" method="post" name="formFechas"> 
         <label class= "etiqueta" for="checkin-date">Entrada <i class="fa fa-calendar"></i> </label>
         <input id="chekin-date" name="fechaEntrada" type="date" >
@@ -124,10 +124,8 @@
         <label class= "etiqueta" for="adultos">Adultos <i class="fa fa-male"></i> <i class="fa fa-female"></i> </label>
         <input id="adulto" name="cantidadAdultos" type="number" min="1" value="1" >
         <label class= "etiqueta" for="ninos">Niños <i class="fa fa-child"></i> </label>
-        <input id="ninos" name="cantidadNinos" type="number" min="0" value="0" >
-        <label class= "etiqueta" for="rooms">Habitaciones <i class="fa fa-hotel"></i></label>
-        <input id="habitacion" name="cantidadhabitaciones" type="number" min="1" value="1" >
-        <button type="submit" class="btn" onclick="guardarReserva()">RESERVAR</button>       
+        <input id="ninos" name="cantidadNinos" type="number" min="0" value="0" >        
+        <button type="submit" class="boton" onclick="guardarReserva()">RESERVAR</button>       
     </form>
   </div>
 

@@ -22,6 +22,6 @@ public class ReservaDto {
     private Date fechaSalida;
     private Integer cantidadAdultos;
     private Integer cantidadNinos;
-    private Integer cantidadHabitaciones;
+    
     
 }

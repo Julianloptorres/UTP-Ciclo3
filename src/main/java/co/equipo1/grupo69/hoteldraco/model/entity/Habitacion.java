@@ -1,5 +1,6 @@
 package co.equipo1.grupo69.hoteldraco.model.entity;
 import javax.persistence.Entity;
+
 import javax.persistence.Id;
 
 
@@ -12,10 +13,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Habitacion {
+
     @Id    
-    private Integer numerohabitacion; //cambio del id generado automaticamente por el numero de la habitacion con id 
-    
+    private Integer id;
     private Double precio ;
     private String tipoHabitacion ;
+    private String imagenUrl;
     
 }

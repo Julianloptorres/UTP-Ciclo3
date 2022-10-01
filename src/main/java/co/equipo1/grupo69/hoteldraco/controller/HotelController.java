@@ -3,6 +3,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import co.equipo1.grupo69.hoteldraco.Service.ConfirmacionReservaService;
@@ -21,6 +22,8 @@ public class HotelController {
 
     @GetMapping("/habitaciones")
     public String goToHabitaciones(Model model){
+        var habitaciones = this.confirmacionReservaService.getHabitaciones();
+        model.addAttribute("habitaciones", habitaciones);
         return "habitaciones";
     }
 
@@ -38,35 +41,41 @@ public class HotelController {
     public String goToDoble(Model model){
         return "room2";
     }
-//comentario para grabar
+
     @GetMapping("/king")
     public String goToKing(Model model){
         return "habitacion_king";
     }
 
-    @GetMapping("/pay-form")
-    public String goToPayForm(Model model){
-        model.addAttribute("entrada", "30 de Noviembre 2022"); // esto es solo para ver donde debe ir los datos de la reserva
-        model.addAttribute("salida", "12 de Diciembre 2022");
-        model.addAttribute("adultos", "2");
-        model.addAttribute("childrem", "3");
-        model.addAttribute("noches", "12");
-        model.addAttribute("valorNoche", "100.000");
-        model.addAttribute("total", "1'200.000");
-        return "pay-form";
-    }
-
+    @GetMapping("/registro")
+    public String goToRegistro(Model model){
+        return "registro";
+    }    
 
     @PostMapping("/confirmarFechas")
-    public String postConfirmarFechas(@ModelAttribute ReservaDto reserva, Model model){
-        model.addAttribute("infoReserva", reserva); // da error [Error al convertir el valor de propiedad del tipo 'java.lang.String' al tipo requerido 'java.util.Date'
+    public String postConfirmarFechas(Model model){
 
+        var habitaciones = this.confirmacionReservaService.getHabitaciones();
+        model.addAttribute("habitaciones", habitaciones);
         return "habitaciones";
     }
 
-    @PostMapping("/irPago1")
-    public String postIrPago(@ModelAttribute HabitacionDto habitacion, Model model){
-        model.addAttribute("infoHabitacion", habitacion);
+    @GetMapping("/irPago/{id}")
+    public String postIrPago(@PathVariable("id") Integer id, Model model){
+        
+
+        var habitacionOp= confirmacionReservaService.getHabitacionById(id);
+        if(habitacionOp.isEmpty()){
+            model.addAttribute("error", "La habitacion no existe");
+        } else{
+            var habitacion = habitacionOp.get();
+
+            model.addAttribute("tipoHabitacion", habitacion.getTipoHabitacion());
+            model.addAttribute("id", habitacion.getId());
+            model.addAttribute("precio", habitacion.getPrecio());
+            model.addAttribute("imagen", habitacion.getImagenUrl());
+        }
+        
         return "pay-form";
 
     }

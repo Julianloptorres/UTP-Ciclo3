@@ -30,14 +30,13 @@ public class Reserva {
     private Date fechaSalida;
     private Integer cantidadAdultos;
     private Integer cantidadNinos;
-    private Integer cantidadHabitaciones;
-    
+      
 
     @ManyToOne
     private Cliente cliente;
 
     @OneToOne
-    @JoinColumn(name= "habitacion_numerohabitacion")
+    @JoinColumn(name= "habitacion_id")
     private Habitacion habitacion; 
     
 }

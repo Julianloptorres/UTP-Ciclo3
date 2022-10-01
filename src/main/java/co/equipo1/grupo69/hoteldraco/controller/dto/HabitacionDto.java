@@ -11,4 +11,6 @@ import lombok.NoArgsConstructor;
 public class HabitacionDto {
     private Integer id;    
     private Double precio ;
-    private String tipoHabitacion ;}
+    private String tipoHabitacion ;
+    private String imagenUrl;
+}

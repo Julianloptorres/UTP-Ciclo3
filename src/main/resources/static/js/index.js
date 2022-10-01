@@ -20,7 +20,7 @@ const guardarReserva = () => {
         let fechaSalida= document.getElementById("chekout-date").value;
         let adultos= document.getElementById("adulto").value;
         let ninos= document.getElementById("ninos").value;
-        let habitaciones= document.getElementById("habitacion").value;
+        
 
     
 
@@ -28,6 +28,6 @@ const guardarReserva = () => {
     localStorage.setItem("fechaSalida", JSON.stringify(fechaSalida));
     localStorage.setItem("adultos", JSON.stringify(adultos));
     localStorage.setItem("ninos", JSON.stringify(ninos));
-    localStorage.setItem("habitaciones", JSON.stringify(habitaciones));
+   
 }
 
