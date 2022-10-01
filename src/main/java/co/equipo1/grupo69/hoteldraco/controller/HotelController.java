@@ -29,12 +29,7 @@ public class HotelController {
     public String goToSencilla(Model model){
         return "sencilla";
     }
-
-    @GetMapping("/registro")
-    public String goToregistro(Model model){
-        return "registro";
-    }
-
+   
     @GetMapping("/doble")
     public String goToDoble(Model model){
         return "room2";

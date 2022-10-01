@@ -2,7 +2,7 @@ package co.equipo1.grupo69.hoteldraco.controller.dto;
 
 import java.util.Date;
 
-
+import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,8 +22,10 @@ public class ClienteDto {
     private String pais;
     private String telefono;
     private String peticion;
-    private String habitacion;    
-    private Date entrada;    
+    private String habitacion;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date entrada;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date salida;
     
 }
