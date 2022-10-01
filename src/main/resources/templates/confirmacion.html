@@ -61,6 +61,10 @@
     <table class="table table-bordered table-hover table-light">    
         <tbody>
           <tr>
+            <th scope="row">Numero de Reserva</th>
+            <td th:value="${infoCliente.id}">.</td>
+          </tr>
+          <tr>
             <th scope="row">Fecha de entrada</th>
             <td th:text="${infoCliente.entrada}">.</td>
           </tr>
@@ -115,12 +119,7 @@
 
         </body>
       </table>
-      <div class="btn-group" role="group" aria-label="Basic mixed styles">
-        <button type="button" class="btn btn-danger">Cancelar/borrar tu reserva</button>
-        <button type="button" class="btn btn-warning">Modificar tu reserva</button>
-        <button type="button" class="btn btn-success">Continuar con tu reserva</button>
-      </div>
-
+      
 </div>
 
     <!-- footer -->

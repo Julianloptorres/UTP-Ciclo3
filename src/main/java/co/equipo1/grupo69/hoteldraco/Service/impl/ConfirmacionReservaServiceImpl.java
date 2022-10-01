@@ -116,5 +116,31 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
                     cli.getPeticion(), cli.getHabitacion(),cli.getEntrada(), cli.getSalida()))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public ClienteDto editarCliente(ClienteDto cliente) {
+
+        var entity = new Cliente();
+        
+        entity.setNombre(cliente.getNombre());
+        entity.setApellidos(cliente.getApellidos());
+        entity.setEmail(cliente.getEmail());
+        entity.setDireccion(cliente.getDireccion());
+        entity.setCiudad(cliente.getCiudad());
+        entity.setPais(cliente.getPais());                        
+        entity.setTelefono(cliente.getTelefono());
+        entity.setPeticion(cliente.getPeticion());
+        entity.setEntrada(cliente.getEntrada());
+        entity.setSalida(cliente.getSalida());
+        entity.setHabitacion(cliente.getHabitacion());
+        
+        return clienteRepository.save(cliente);
+    }
+
+    @Override
+    public void eliminarCliente(Integer id) {
+        
+        clienteRepository.deleteById(id);
+    }
         
 }

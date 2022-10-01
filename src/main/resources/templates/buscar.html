@@ -48,9 +48,13 @@
 
     <div class="container -sm">
         <div th:each="cli: ${clientes}">
-            <label for="boton">Click para ver tu reserva</label>
-            <a th:href="@{/reserva/{id}(id=${cli.id})}" class="btn" id="boton" th:text="${cli.id}">RESERVAR </a>
+            <h3>Click en el numero de la reserva</h3>
+            <a th:href="@{/reserva/{id}(id=${cli.id})}" class="btn" id="boton" th:text="${cli.id}">Ver</a> 
+            <a th:href="@{/editar/{id}(id=${cli.id})}">Editar</a>           
+            <a th:href="@{/eliminar/{id}(id=${cli.id})}">Eliminar reserva</a>
         </div>
+
+
     </div>
     <!-- footer -->
 <br>
