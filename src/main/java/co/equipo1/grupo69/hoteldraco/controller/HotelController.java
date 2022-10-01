@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import co.equipo1.grupo69.hoteldraco.Service.ConfirmacionReservaService;
 import co.equipo1.grupo69.hoteldraco.controller.dto.ClienteDto;
-import co.equipo1.grupo69.hoteldraco.controller.dto.ReservaDto;
-import co.equipo1.grupo69.hoteldraco.controller.dto.HabitacionDto;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
