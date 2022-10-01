@@ -81,5 +81,40 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
                     hab.getId(),hab.getPrecio(),hab.getTipoHabitacion(),hab.getImagenUrl()))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public Optional<ClienteDto> getClienteById(Integer id) {
+        var cliente= clienteRepository.findById(id);
+
+        if (cliente.isEmpty()){
+            return Optional.empty();
+            }
+    
+            return Optional.of(new ClienteDto(
+                cliente.get().getId(),
+                cliente.get().getNombre(),
+                cliente.get().getApellidos(),
+                cliente.get().getEmail(),
+                cliente.get().getDireccion(),
+                cliente.get().getCiudad(),
+                cliente.get().getPais(),
+                cliente.get().getTelefono(),
+                cliente.get().getPeticion(),
+                cliente.get().getHabitacion(),
+                cliente.get().getEntrada(),
+                cliente.get().getSalida()));
+    }
+
+    @Override
+    public List<ClienteDto> getClientes() {
+        var clientes = clienteRepository.findAll(Sort.by("id"));
+
+        return clientes.stream()
+                .map(cli -> new ClienteDto(
+                    cli.getId(),cli.getNombre(),cli.getApellidos(),cli.getEmail(),
+                    cli.getDireccion(), cli.getCiudad(), cli.getPais(),cli.getTelefono(),
+                    cli.getPeticion(), cli.getHabitacion(),cli.getEntrada(), cli.getSalida()))
+                .collect(Collectors.toList());
+    }
         
 }

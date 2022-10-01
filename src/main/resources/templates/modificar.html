@@ -40,7 +40,6 @@
             <li class="nav-item"><a class="nav-link" href="#contacto"><img src="/img/iconos/contactenos.png"
                         alt="contactenos" width="35" height="30"
                         class="d-inline-block align-text-top">Contáctenos</a></li>
-            <li class="nav-item"><a class="nav-link" href="/buscar"><i class="fa fa-search"></i> Buscar mi reserva</a></li>
             </ul>
         </div>
       </div>
@@ -62,55 +61,24 @@
         <tbody>
           <tr>
             <th scope="row">Fecha de entrada</th>
-            <td th:text="${infoCliente.entrada}">.</td>
+            <td th:text="${entrada}">.</td>
           </tr>
           <tr>
             <th scope="row">Fecha de Salida</th>
-            <td th:text="${infoCliente.salida}">.</td>
+            <td th:text="${salida}">.</td>
           </tr>
           <tr>
             <th scope="row">Habitacion</th>
-            <td th:text="${infoCliente.habitacion}">.</td>
+            <td th:text="${habitacion}">.</td>
           </tr>
 
           <tr>
             <th scope="row">Nombre</th>
-            <td th:text="${infoCliente.nombre}">.</td>
-          </tr>
-
-          <tr>
-            <th scope="row">Apellidos</th>
-            <td th:text="${infoCliente.apellidos}">.</td> 
-            </tr>
-
-          <tr>
-            <th scope="row">Correo</th>
-            <td th:text="${infoCliente.email}">.</td>
-          </tr>
-
-          <tr>
-            <th scope="row">Dirección de Residencia</th>
-            <td th:text="${infoCliente.direccion}">.</td>
-          </tr>
-
-          <tr>
-            <th scope="row">Ciudad de Residencia</th>
-            <td th:text="${infoCliente.ciudad}">.</td>
-          </tr>
-
-          <tr>
-            <th scope="row">País de Residencia</th>
-            <td th:text="${infoCliente.pais}">.</td>
-          </tr>
-
-          <tr>
-            <th scope="row">Telefono de Contacto</th>
-            <td th:text="${infoCliente.telefono}">.</td>
-          </tr>
-
+            <td th:text="${nombre}">.</td>
+          </tr>          
           <tr>
             <th scope="row">Peticion</th>
-            <td th:text="${infoCliente.peticion}">.</td>
+            <td th:text="${peticion}">.</td>
           </tr>
 
         </tbody>

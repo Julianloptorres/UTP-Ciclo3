@@ -45,6 +45,13 @@ public class HotelController {
         return "registro";
     }    
 
+    @GetMapping("/buscar")
+    public String goToIndex(Model model){
+        var clientes = this.confirmacionReservaService.getClientes();
+        model.addAttribute("clientes", clientes);
+        return "buscar";
+    }
+
     @PostMapping("/confirmarFechas")
     public String postConfirmarFechas(Model model){
 
@@ -81,5 +88,32 @@ public class HotelController {
         model.addAttribute("infoCliente", cliente);
 
         return "confirmacion";
+    }
+
+
+    @GetMapping("/reserva/{id}")
+    public String buscarReserva(@PathVariable("id") Integer id, Model model){
+        var clienteOp= confirmacionReservaService.getClienteById(id);
+        if(clienteOp.isEmpty()){
+            model.addAttribute("error", "La habitacion no existe");
+        } else{
+            var cliente = clienteOp.get();
+
+            model.addAttribute("entrada", cliente.getEntrada());
+            model.addAttribute("id", cliente.getId().toString());
+            model.addAttribute("salida",cliente.getSalida());
+            model.addAttribute("habitacion", cliente.getHabitacion());
+            model.addAttribute("nombre", cliente.getNombre());
+            model.addAttribute("apellidos", cliente.getApellidos());
+            model.addAttribute("email", cliente.getEmail());
+            model.addAttribute("direccion", cliente.getDireccion());
+            model.addAttribute("ciudad", cliente.getCiudad());
+            model.addAttribute("pais", cliente.getPais());
+            model.addAttribute("telefono", cliente.getTelefono());
+            model.addAttribute("peticion", cliente.getPeticion());
+            
+        }
+        return "modificar";
+        
     }
 }
