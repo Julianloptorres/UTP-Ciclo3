@@ -82,6 +82,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <!--Columna lado izquierdo formulario  -->
+                    
                     <div class="col-sm-12 col-md-6 col-xl-4 form-col">
                         <div class=" row">
                             <div class="col-12 align-items-start">
@@ -95,24 +96,20 @@
                                     <form action="#" target="" method="get" name="formDetalleReserva">
                                         <div>
                                             <label>Entrada</label>
-                                            <label id="chekin-date" class="label-info">29 de Septiembre 2022</label>
+                                            <label id="chekin-date" class="label-info">.</label>
                                         </div>
                                         <div>
                                             <label>Salida</label>
-                                            <label id="chekout-date" class="label-info">10 de Octubre 2022</label>
+                                            <label id="chekout-date" class="label-info">.</label>
                                         </div>
                                         <div>
                                             <label>Adultos</label>
-                                            <label id="adultos" class="label-info">2</label>
+                                            <label id="adultos" class="label-info">.</label>
                                         </div>
                                         <div>
                                             <label>Niños</label>
-                                            <label id="ninos" class="label-info">1</label>
-                                        </div>
-                                        <div>
-                                            <label>Habitaciones</label>
-                                            <label id="habitaciones" class="label-info">1</label>
-                                        </div>
+                                            <label id="ninos" class="label-info">.</label>
+                                        </div>                                        
                                     </form>                                  
 
                                 </section>
@@ -122,21 +119,11 @@
                             <div class="col-12 form-izq">
                                 <section class="tipo_habitacion">
                                     <h2 class="h2-form" >Habitación</h2>
-                                    <form action="#" target="" method="get" name="formTipoHabitacion">
-                                        <div>
-                                            <label>Noches</label>
-                                            <label class="label-info">10</label>
-                                        </div>
+                                    <h2 class="h2-form" th:text="${tipoHabitacion}">Habitación</h2>
                                         <div>
                                             <label>Valor noche</label>
-                                            <label class="label-info" >$ 120.000</label>
-                                        </div>
-                                        <div>
-                                            <label>Total</label>
-                                            <label class="label-info" th:text="${total}">$ 630.000</label>
-                                        </div>
-                                    </form>
-
+                                            <label class="label-info" th:text="${precio}" >$ 120.000</label>
+                                        </div>                                       
                                 </section>
 
                             </div>
@@ -152,6 +139,16 @@
                         <section class="formulario-huesped">
                             <h2 class="h2-form">Información Huésped</h2>
                             <form action="/confirmarReserva" target="" method="post" name="formDatosPersonales">
+                                <div>
+                                    <input id="id" type="date" name="init_date">
+                                    <input id="ed" type="date" name="end_date">
+                                </div>
+                                <div>
+                                    <select name="habitacion" id="habitacion">
+                                        <option th:value="${tipoHabitacion}" th:text="${tipoHabitacion}">Habitacion</option>
+                                    </select>
+                                </div>
+                               
                                 <div>
                                     <label for="nombre">Nombre</label>
                                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
@@ -187,21 +184,13 @@
                                         maxlength="300"></textarea>
                                 </div>
                                 
-                                <input type="submit" name="enviar" value="Confirmar" />                                
+                                <input type="submit" name="enviar" value="Confirmar"/>                                
                                 
                             </form>
                         </section>
                     </div>
                     <!--Fin Columna centro formulario  -->
 
-                    <!--Columna lado derecho formulario  -->
-                    <div class="col-sm-12 col-md-12 col-xl-4 form-col">
-                        <section class="formulario-pago">
-                            <h2 class="h2-form">Detalles Pago</h2>
-                        </section>
-
-                    </div>
-                    <!--Fin Columna lado derecho formulario  -->
                 </div>
             </div>
         </main>
@@ -242,6 +231,7 @@
                 crossorigin="anonymous"></script>
             <script src="/js/pay.js"></script>
             <script>recuperarDatos()</script>
+            <script>enviarDatos()</script>
 
 </body>
 

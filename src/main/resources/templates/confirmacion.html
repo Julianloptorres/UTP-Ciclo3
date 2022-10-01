@@ -60,9 +60,22 @@
     <table class="table table-bordered table-hover table-light">    
         <tbody>
           <tr>
+            <th scope="row">Fecha de entrada</th>
+            <td th:text="${infoCliente.entrada}">.</td>
+          </tr>
+          <tr>
+            <th scope="row">Fecha de Salida</th>
+            <td th:text="${infoCliente.salida}">.</td>
+          </tr>
+          <tr>
+            <th scope="row">Habitacion</th>
+            <td th:text="${infoCliente.habitacion}">.</td>
+          </tr>
+
+          <tr>
             <th scope="row">Nombre</th>
             <td th:text="${infoCliente.nombre}">.</td>
-            </tr>
+          </tr>
 
           <tr>
             <th scope="row">Apellidos</th>

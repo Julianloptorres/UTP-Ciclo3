@@ -4,7 +4,7 @@ const guardarHabitacion = () => {
         fechaSalida: document.getElementById("chekout-date").value,
         adultos: document.getElementById("adulto").value,
         ninos: document.getElementById("ninos").value,
-        habitaciones: document.getElementById("habitacion").value
+        
 
     };
 

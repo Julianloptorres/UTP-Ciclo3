@@ -8,6 +8,6 @@ import co.equipo1.grupo69.hoteldraco.model.entity.Cliente;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Integer>{
     
-    Optional<Cliente> findByApellidos(String cliente);
+    Optional<Cliente> findById(String cliente);
     
 }

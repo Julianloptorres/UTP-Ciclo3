@@ -1,5 +1,9 @@
 package co.equipo1.grupo69.hoteldraco.controller.dto;
 
+import java.util.Date;
+
+
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,5 +22,8 @@ public class ClienteDto {
     private String pais;
     private String telefono;
     private String peticion;
+    private String habitacion;    
+    private Date entrada;    
+    private Date salida;
     
 }
