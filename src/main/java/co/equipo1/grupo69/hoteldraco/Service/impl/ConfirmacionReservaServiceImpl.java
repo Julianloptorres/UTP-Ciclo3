@@ -81,5 +81,66 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
                     hab.getId(),hab.getPrecio(),hab.getTipoHabitacion(),hab.getImagenUrl()))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public Optional<ClienteDto> getClienteById(Integer id) {
+        var cliente= clienteRepository.findById(id);
+
+        if (cliente.isEmpty()){
+            return Optional.empty();
+            }
+    
+            return Optional.of(new ClienteDto(
+                cliente.get().getId(),
+                cliente.get().getNombre(),
+                cliente.get().getApellidos(),
+                cliente.get().getEmail(),
+                cliente.get().getDireccion(),
+                cliente.get().getCiudad(),
+                cliente.get().getPais(),
+                cliente.get().getTelefono(),
+                cliente.get().getPeticion(),
+                cliente.get().getHabitacion(),
+                cliente.get().getEntrada(),
+                cliente.get().getSalida()));
+    }
+
+    @Override
+    public List<ClienteDto> getClientes() {
+        var clientes = clienteRepository.findAll(Sort.by("id"));
+
+        return clientes.stream()
+                .map(cli -> new ClienteDto(
+                    cli.getId(),cli.getNombre(),cli.getApellidos(),cli.getEmail(),
+                    cli.getDireccion(), cli.getCiudad(), cli.getPais(),cli.getTelefono(),
+                    cli.getPeticion(), cli.getHabitacion(),cli.getEntrada(), cli.getSalida()))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public ClienteDto editarCliente(ClienteDto cliente) {
+
+        var entity = new Cliente();
+        
+        entity.setNombre(cliente.getNombre());
+        entity.setApellidos(cliente.getApellidos());
+        entity.setEmail(cliente.getEmail());
+        entity.setDireccion(cliente.getDireccion());
+        entity.setCiudad(cliente.getCiudad());
+        entity.setPais(cliente.getPais());                        
+        entity.setTelefono(cliente.getTelefono());
+        entity.setPeticion(cliente.getPeticion());
+        entity.setEntrada(cliente.getEntrada());
+        entity.setSalida(cliente.getSalida());
+        entity.setHabitacion(cliente.getHabitacion());
+        
+        return clienteRepository.save(cliente);
+    }
+
+    @Override
+    public void eliminarCliente(Integer id) {
+        
+        clienteRepository.deleteById(id);
+    }
         
 }
