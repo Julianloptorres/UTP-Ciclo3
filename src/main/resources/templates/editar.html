@@ -92,14 +92,15 @@
                     <!--Columna centro formulario  -->
                     <div class="col-sm-12 col-md-6 col-xl-4 form-col">
                         <section class="formulario-huesped">
-                            <h2 class="h2-form">Información Huésped</h2>
-                            <form  target="" method="post" name="formDatosPersonales">
-                                <div>                                    
-                                    <input id="entrada" type="date" name="entrada" required>
-                                    <input id="salida" type="date" name="salida" required>
+                            <h2 class="h2-form">Información Reserva</h2>
+                            <form  th:action="@{/cliente/{id}(id=${cliente.id})}" th:object="${cliente}" method="post" name="formDatosPersonales">
+                                <div>                                                                      
+                                    <input id="entrada" type="date" name="entrada" th:field="*{entrada}"required>                                      
+                                    <input id="salida" type="date" name="salida" th:field="*{salida}" required>
                                 </div>
                                 <div>
-                                    <select name="habitacion" id="habitacion"  required>
+                                    <label for="habitacion">Habitacion</label>
+                                    <select name="habitacion" id="habitacion" style="width:40%" required>
                                         <option id="Junior"value="Junior">Junior</option>
                                         <option id="Doble"value="Doble">Doble</option>
                                         <option id="King" value= "King">King</option>
@@ -108,35 +109,35 @@
                                
                                 <div>
                                     <label for="nombre">Nombre</label>
-                                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required/>
+                                    <input type="text" name="nombre" th:field="*{nombre}" id="nombre" placeholder="Nombre" required/>
                                 </div>
                                 <div>
                                     <label for="apellidos">Apellidos</label>
-                                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required/>
+                                    <input type="text" name="apellidos" id="apellidos" th:field="*{apellidos}"placeholder="Apellidos" required/>
                                 </div>
                                 <div>
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="email" required />
+                                    <label for="email">Email</label> 
+                                    <label for="email" th:text="*{email}">Email</label>                                   
                                 </div>
                                 <div>
                                     <label for="direccion">Dirección</label>
-                                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" />
+                                    <input type="text" name="direccion" id="direccion" th:field="*{direccion}"placeholder="Dirección" />
                                 </div>
                                 <div>
                                     <label for="ciudad">Ciudad</label>
-                                    <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" />
+                                    <input type="text" name="ciudad" id="ciudad" th:field="*{ciudad}" placeholder="Ciudad" />
                                 </div>
                                 <div>
                                     <label for="pais">País</label>
-                                    <input type="text" name="pais" id="pais" placeholder="País" />
+                                    <input type="text" name="pais" id="pais" th:field="*{pais}" placeholder="País" />
                                 </div>
                                 <div>
                                     <label for="telefono">Teléfono</label>
-                                    <input type="text" name="telefono" id="telefono" placeholder="Teléfono" required/>
+                                    <input type="text" name="telefono" id="telefono" th:field="*{telefono}" placeholder="Teléfono" required/>
                                 </div>
                                 <div>
                                     <label for="peticion">Petición</label>
-                                    <textarea name="peticion" id="peticion"
+                                    <textarea name="peticion" id="peticion" th:field="*{peticion}"
                                         placeholder="Describe brevemente en menos de 300 carácteres"
                                         maxlength="300"></textarea>
                                 </div>

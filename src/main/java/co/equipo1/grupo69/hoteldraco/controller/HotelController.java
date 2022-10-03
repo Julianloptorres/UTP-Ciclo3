@@ -96,12 +96,8 @@ public class HotelController {
 
     @GetMapping("/reserva/{id}") // muestra la informacion de la reserva en la pagina ver reserva.
     public String buscarReserva(@PathVariable("id") Integer id, Model model){
-        var clienteOp= confirmacionReservaService.getClienteById(id);
-        if(clienteOp.isEmpty()){
-            model.addAttribute("error", "La habitacion no existe");
-        } else{
-            var cliente = clienteOp.get();
-
+        var cliente= confirmacionReservaService.getClienteById(id);
+        
             model.addAttribute("entrada", cliente.getEntrada());
             model.addAttribute("id", cliente.getId());
             model.addAttribute("salida",cliente.getSalida());
@@ -115,7 +111,7 @@ public class HotelController {
             model.addAttribute("telefono", cliente.getTelefono());
             model.addAttribute("peticion", cliente.getPeticion());
             
-        }
+        
         return "verReserva";
         
     }
@@ -127,9 +123,20 @@ public class HotelController {
     }
 
     @GetMapping("/editar/{id}") //redirige al formulario para editar la reserva 
-    public String editarReserva(@PathVariable Integer id){
-
+    public String mostrarFormulariodeEditarReserva(@PathVariable Integer id, Model modelo){
+        modelo.addAttribute("cliente", confirmacionReservaService.getClienteById(id));
         return "editar";
     }
+
+    @PostMapping("/cliente/{id}") //editar la reserva
+    public String actualizarReserva(@PathVariable Integer id, @ModelAttribute("cliente") ClienteDto cliente, Model model){
+        confirmacionReservaService.getClienteById(id);
+        confirmacionReservaService.editarCliente(cliente);
+        confirmacionReservaService.eliminarCliente(id);
+
+        return "redirect:/buscar";
+    }
+
+    
 
 }
