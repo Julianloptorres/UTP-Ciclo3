@@ -92,14 +92,15 @@
                     <!--Columna centro formulario  -->
                     <div class="col-sm-12 col-md-6 col-xl-4 form-col">
                         <section class="formulario-huesped">
-                            <h2 class="h2-form">Información Huésped</h2>
+                            <h2 class="h2-form">Información Reserva</h2>
                             <form  th:action="@{/cliente/{id}(id=${cliente.id})}" th:object="${cliente}" method="post" name="formDatosPersonales">
-                                <div>                                    
-                                    <input id="entrada" type="date" name="entrada" th:field="*{entrada}"required>
+                                <div>                                                                      
+                                    <input id="entrada" type="date" name="entrada" th:field="*{entrada}"required>                                      
                                     <input id="salida" type="date" name="salida" th:field="*{salida}" required>
                                 </div>
                                 <div>
-                                    <select name="habitacion" id="habitacion"  required>
+                                    <label for="habitacion">Habitacion</label>
+                                    <select name="habitacion" id="habitacion" style="width:40%" required>
                                         <option id="Junior"value="Junior">Junior</option>
                                         <option id="Doble"value="Doble">Doble</option>
                                         <option id="King" value= "King">King</option>
@@ -115,6 +116,7 @@
                                     <input type="text" name="apellidos" id="apellidos" th:field="*{apellidos}"placeholder="Apellidos" required/>
                                 </div>
                                 <div>
+                                    <label for="email">Email</label> 
                                     <label for="email" th:text="*{email}">Email</label>                                   
                                 </div>
                                 <div>
