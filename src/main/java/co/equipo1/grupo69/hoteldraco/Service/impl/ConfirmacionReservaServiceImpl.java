@@ -69,7 +69,8 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
             habitacion.get().getId(),
             habitacion.get().getPrecio(),
             habitacion.get().getTipoHabitacion(),
-            habitacion.get().getImagenUrl()));
+            habitacion.get().getImagenUrl(), 
+            habitacion.get().getDescripcion()));
     }
 
     @Override
@@ -78,7 +79,7 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
 
         return habitaciones.stream()
                 .map(hab -> new HabitacionDto(
-                    hab.getId(),hab.getPrecio(),hab.getTipoHabitacion(),hab.getImagenUrl()))
+                    hab.getId(),hab.getPrecio(),hab.getTipoHabitacion(),hab.getImagenUrl(), hab.getDescripcion()))
                 .collect(Collectors.toList());
     }
 

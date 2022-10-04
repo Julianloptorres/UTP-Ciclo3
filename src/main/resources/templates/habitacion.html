@@ -18,7 +18,7 @@
   <div class="head-top">
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex" href="#">
+        <a class="navbar-brand d-flex" href="/">
           <img src="/img/iconos/icono.png" alt="logo" width="100">
         </a>
 
@@ -70,65 +70,18 @@
         </div>
       </div>
     </nav>
-<div class="d-flex" id="navbarSupportedContent">
-<ul class="navbar-nav ml-auto">
-    <li class="nav-item"><a class="nav-link" aria-current="page" href="/"><img
-                src="/img/iconos/inicio1.png" alt="inicio" width="35" height="30"
-                class="d-inline-block align-text-top">Inicio</a></li>
-    <li class="nav-item"><a class="nav-link" href="/habitaciones"><img src="/img/iconos/habitaciones.png"
-                alt="habitaciones" width="35" height="30"
-                class="d-inline-block align-text-top">Habitaciones</a></li>
-    <li class="nav-item"><a class="nav-link" href="/#about"><img src="/img/iconos/quienessomos.png"
-                alt="quienes-somos" width="35" height="30" class="d-inline-block align-text-top">¿Quiénes
-            somos?</a></li>
-    <li class="nav-item"><a class="nav-link" href="#contacto"><img src="/img/iconos/contactenos.png"
-                alt="contactenos" width="35" height="30"
-                class="d-inline-block align-text-top">Contáctenos</a></li>
-<!-----Log In----->
-<button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ModalForm">
-  Ingresa o registrate
-  </button>
-  <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-  <div class="modal-content">
-  <div class="modal-body">
-  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-  <div class="myform">
-  <h1 class="text-center">Ingresa</h1>
-  <form>
-  <div class="mb-3 mt-4">
-  <label for="exampleInputEmail1" class="form-label">Correo</label>
-  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-  <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <button type="submit" class="btn mt-3 rounded-4">Ingresar</button>
-  <p>Aun no eres miembro? <a href="/registro">Registrate</a></p>
-  </form>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </ul>
-  </div>
-  </div>
-  </nav>
-</body>
 
 <!-------Habitaciones----->
 <div id="Habitacion-sencilla">
   <div class="container-md pb-5">
 
     <div class="row pt-5">
-      <h1 class="text-center pb- pt-0 h1">Habitación Junior</h1>
+      <h1 class="text-center pb- pt-0 h1" th:text="${tipoHabitacion}">Habitación Junior</h1>
     </div>
     <br>
     <br>
     <div class="row pt-">
-      <p class="text-center pb-3 pt-0 p">Cómodas habitaciones con un área promedio de 40 m² que permite
+      <p class="text-center pb-3 pt-0 p" th:text="${descripcion}">Cómodas habitaciones con un área promedio de 40 m² que permite
         una acomodación hasta de 2 personas (un adulto y un niño). Tiene una especial vocación para
         alojamiento en viajes de negocios o en pareja. Garantía de un tranquilo descanso.
         Con la posibilidad de tapete o piso en madera..</p>
@@ -162,20 +115,14 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/img/Habitacion-sencilla/imagen1.jpg" class="d-block w-100" height="450" alt="...">
+                <img th:src="@{/img/{id}_1.jpg(id= ${id})}" class="d-block w-100" height="450" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="/img/Habitacion-sencilla/imagen2.jpg" class="d-block w-100" height="450" alt="...">
+                <img th:src="@{/img/{id}_2.jpg(id= ${id})}" class="d-block w-100" height="450" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="/img/Habitacion-sencilla/imagen3.jpg" class="d-block w-100" height="450" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/img/Habitacion-sencilla/imagen4.jpg" class="d-block w-100" height="450" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/img/Habitacion-sencilla/imagen5.jpg" class="d-block w-100" height="450" alt="...">
-              </div>
+                <img th:src="@{/img/{id}_3.jpg(id= ${id})}" class="d-block w-100" height="450" alt="...">
+              </div>              
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
               data-bs-slide="prev">
@@ -199,7 +146,7 @@
             <div class="col">
               <p class="text"><img src="/img/iconos/television.png" alt="television" width="30" height="30"
                   class="d-inline-block align-text-top"> Led TV</p>
-              <p class="ctext"><img src="img/iconos/wifi.png" alt="wifi" width="30" height="30"
+              <p class="ctext"><img src="/img/iconos/wifi.png" alt="wifi" width="30" height="30"
                   class="d-inline-block align-text-top"> Wifi</p>
             </div>
             <div class="col">
@@ -216,11 +163,7 @@
               <p class="text"><img src="/img/iconos/secador.png" alt="secador" width="30" height="30"
                   class="d-inline-block align-text-top"> Secador de pelo</p>
             </div>
-            <br>
-            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-              <button type="button" class="btn btn-dark">Reserva esta habitación aqui</button>
-              <br>
-            </div>
+            <br>            
           </div>
         </div>
         <hr size="2px" color="black" />
@@ -228,7 +171,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <img src="/img/Habitacion-sencilla/imagen1.jpg" with=70 height="350" alt="television">
+            <img th:src="${imagen}" with=70 height="350" alt="television">
           </div>
           <div class="col-5">
             <br>

@@ -17,7 +17,7 @@
   <div class="head-top">
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar" >
       <div class="container-fluid">
-      <a class="navbar-brand d-flex" href="#">
+      <a class="navbar-brand d-flex" href="/">
       <img src="/img/iconos/icono.png" alt="logo" width="100">
       </a>
       
@@ -60,10 +60,6 @@
 
     <table class="table table-bordered table-hover table-light">    
         <tbody>
-          <tr>
-            <th scope="row">Numero de Reserva</th>
-            <td th:value="${infoCliente.id}">.</td>
-          </tr>
           <tr>
             <th scope="row">Fecha de entrada</th>
             <td th:text="${infoCliente.entrada}">.</td>
