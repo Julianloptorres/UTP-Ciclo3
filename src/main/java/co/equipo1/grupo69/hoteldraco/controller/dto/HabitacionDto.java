@@ -13,4 +13,5 @@ public class HabitacionDto {
     private Double precio ;
     private String tipoHabitacion ;
     private String imagenUrl;
+    private String descripcion;
 }

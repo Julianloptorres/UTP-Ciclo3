@@ -19,5 +19,6 @@ public class Habitacion {
     private Double precio ;
     private String tipoHabitacion ;
     private String imagenUrl;
+    private String descripcion;
     
 }

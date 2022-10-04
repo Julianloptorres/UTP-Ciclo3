@@ -94,6 +94,23 @@ public class HotelController {
         return "buscar";
     }
 
+    @GetMapping("/habitacion/{id}") //muestra la informacion de cada habitacion en el ver más
+    public String mostrarHabitacion(@PathVariable("id") Integer id, Model model){
+        var habitacionOp= confirmacionReservaService.getHabitacionById(id);
+        if(habitacionOp.isEmpty()){
+            model.addAttribute("error", "La habitacion no existe");
+        } else{
+            var habitacion = habitacionOp.get();
+
+            model.addAttribute("tipoHabitacion", habitacion.getTipoHabitacion());
+            model.addAttribute("id", habitacion.getId());
+            model.addAttribute("precio", habitacion.getPrecio());
+            model.addAttribute("imagen", habitacion.getImagenUrl());
+            model.addAttribute("descripcion", habitacion.getDescripcion());
+        }
+        return "habitacion";
+    } 
+
     @GetMapping("/reserva/{id}") // muestra la informacion de la reserva en la pagina ver reserva.
     public String buscarReserva(@PathVariable("id") Integer id, Model model){
         var cliente= confirmacionReservaService.getClienteById(id);
