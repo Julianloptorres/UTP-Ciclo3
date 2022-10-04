@@ -83,14 +83,10 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
     }
 
     @Override
-    public Optional<ClienteDto> getClienteById(Integer id) {
+    public ClienteDto getClienteById(Integer id) {
         var cliente= clienteRepository.findById(id);
-
-        if (cliente.isEmpty()){
-            return Optional.empty();
-            }
     
-            return Optional.of(new ClienteDto(
+            return new ClienteDto(
                 cliente.get().getId(),
                 cliente.get().getNombre(),
                 cliente.get().getApellidos(),
@@ -102,7 +98,7 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
                 cliente.get().getPeticion(),
                 cliente.get().getHabitacion(),
                 cliente.get().getEntrada(),
-                cliente.get().getSalida()));
+                cliente.get().getSalida());
     }
 
     @Override
@@ -118,10 +114,9 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
     }
 
     @Override
-    public ClienteDto editarCliente(ClienteDto cliente) {
+    public void editarCliente(ClienteDto cliente) {
 
         var entity = new Cliente();
-        
         entity.setNombre(cliente.getNombre());
         entity.setApellidos(cliente.getApellidos());
         entity.setEmail(cliente.getEmail());
@@ -133,8 +128,8 @@ public class ConfirmacionReservaServiceImpl implements ConfirmacionReservaServic
         entity.setEntrada(cliente.getEntrada());
         entity.setSalida(cliente.getSalida());
         entity.setHabitacion(cliente.getHabitacion());
-        
-        return clienteRepository.save(cliente);
+
+       clienteRepository.save(entity);
     }
 
     @Override

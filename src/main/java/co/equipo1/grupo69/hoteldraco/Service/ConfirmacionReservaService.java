@@ -22,9 +22,9 @@ public interface ConfirmacionReservaService {
 
     void saveCliente(ClienteDto cliente); // guarda el cliente
     
-    Optional<ClienteDto> getClienteById(Integer id); // buscar el cliente por id
+    ClienteDto getClienteById(Integer id); // buscar el cliente por id
 
-    ClienteDto editarCliente(ClienteDto cliente);
+    void editarCliente(ClienteDto cliente);
 
     void eliminarCliente(Integer id);
     
